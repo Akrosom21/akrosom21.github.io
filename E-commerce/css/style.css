@@ -1,22 +1,22 @@
 @import url(../css/normalize.css);
 @font-face {
   font-family: 'Segoe WP';
-  src: url("../../fonts/SegoeWP-Light.eot");
-  src: url("../../fonts/SegoeWP-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/SegoeWP-Light.woff2") format("woff2"), url("../../fonts/SegoeWP-Light.woff") format("woff"), url("../../fonts/SegoeWP-Light.ttf") format("truetype"), url("../../fonts/SegoeWP-Light.svg#SegoeWP-Light") format("svg");
+  src: url("../fonts/SegoeWP-Light.eot");
+  src: url("../fonts/SegoeWP-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeWP-Light.woff2") format("woff2"), url("../fonts/SegoeWP-Light.woff") format("woff"), url("../fonts/SegoeWP-Light.ttf") format("truetype"), url("../fonts/SegoeWP-Light.svg#SegoeWP-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Segoe WP';
-  src: url("../../fonts/SegoeWP.eot");
-  src: url("../../fonts/SegoeWP.eot?#iefix") format("embedded-opentype"), url("../../fonts/SegoeWP.woff2") format("woff2"), url("../../fonts/SegoeWP.woff") format("woff"), url("../../fonts/SegoeWP.ttf") format("truetype"), url("../../fonts/SegoeWP.svg#SegoeWP") format("svg");
+  src: url("../fonts/SegoeWP.eot");
+  src: url("../fonts/SegoeWP.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeWP.woff2") format("woff2"), url("../fonts/SegoeWP.woff") format("woff"), url("../fonts/SegoeWP.ttf") format("truetype"), url("../fonts/SegoeWP.svg#SegoeWP") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'SimploW90-CapsDEMO';
-  src: url("../../fonts/SimploW90-CapsDEMO.eot");
-  src: url("../../fonts/SimploW90-CapsDEMO.eot?#iefix") format("embedded-opentype"), url("../../fonts/SimploW90-CapsDEMO.woff2") format("woff2"), url("../../fonts/SimploW90-CapsDEMO.woff") format("woff"), url("../../fonts/SimploW90-CapsDEMO.ttf") format("truetype"), url("../../fonts/SimploW90-CapsDEMO.svg#SimploW90-CapsDEMO") format("svg");
+  src: url("../fonts/SimploW90-CapsDEMO.eot");
+  src: url("../fonts/SimploW90-CapsDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/SimploW90-CapsDEMO.woff2") format("woff2"), url("../fonts/SimploW90-CapsDEMO.woff") format("woff"), url("../fonts/SimploW90-CapsDEMO.ttf") format("truetype"), url("../fonts/SimploW90-CapsDEMO.svg#SimploW90-CapsDEMO") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -113,7 +113,7 @@ img {
   display: flex; }
 
 .logo__img-text {
-  background: url("../../img/intro/intro-book.svg") no-repeat center;
+  background: url("../img/intro/intro-book.svg") no-repeat center;
   background-size: cover;
   width: 150px;
   height: 95px;
@@ -359,7 +359,7 @@ img {
 .slick__inner {
   width: 65%;
   margin-right: 10px;
-  background: #c68182 url(../../img/books-baner/book-preview.png) no-repeat center;
+  background: #c68182 url(../img/books-baner/book-preview.png) no-repeat center;
   background-size: cover;
   min-width: 714px;
   min-height: 304px; }
@@ -457,7 +457,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 35%;
-  background: #a3a3a3 url(../../img/books-baner/sale-baner_bg.png) no-repeat center;
+  background: #a3a3a3 url(../img/books-baner/sale-baner_bg.png) no-repeat center;
   background-size: cover;
   max-width: 269px;
   justify-content: center;
