@@ -1,0 +1,45 @@
+.devices {
+	background: #d9d9d9 url(img/devices.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.devices__title {
+	padding-top: 105px;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	color: #333;
+	text-align: center;
+}
+
+.devices__text {
+	color: #333;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	padding-top: 16px;
+}
+
+.devices__items {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+    max-width: 600px;
+}
+
+.item-tab {
+	display: block;
+	
+	max-width: 100%;
+	height: auto;
+}
+
+.item-phone {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: -90px;
+    right: -80px;
+    z-index: 1;
+}
+

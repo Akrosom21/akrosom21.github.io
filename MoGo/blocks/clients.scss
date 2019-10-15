@@ -1,0 +1,63 @@
+.clients {
+	background: #f5f5f5 url("img/clients-bg.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.clients__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.clients__row {
+	width: 46%;
+}
+
+.clients__inner {
+padding-top: 87px;
+padding-bottom: 60px;
+}
+
+.clients__item {
+	display: flex;
+	padding-bottom: 69px;
+
+	& .line {
+		margin: 0;
+	}
+}
+
+.clients__img {
+	border-radius: 50%;
+}
+
+.clients__job {
+	padding-top: 15px;
+	padding-bottom: 17px;
+	color: #333333;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+}
+
+.clients__text {
+	padding-top: 24px;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.clients__about {
+	padding-left: 30px;
+}
+
+.clients__name {
+	color: #333333;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}

@@ -1,0 +1,77 @@
+.intro  {
+	text-align: center;
+	background: #fce38a url(img/intro-img.jpg) center no-repeat;
+	background-size: cover;
+	color: $colorWhite;
+}
+
+.intro__title h2{
+	padding-top: 175px;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 72px;
+	font-weight: 400;
+}
+
+.intro__title h1 {
+	font-size: 150px;
+	font-weight: 700;
+	max-width: 800px;
+	margin: 0 auto;	
+	padding-bottom: 70px;
+}
+
+.line {
+	height: 2px;
+	width: 60px;
+	background-color: $colorWhite;
+	margin: 0 auto 50px;
+}
+
+.intro_btn {
+	color: $colorWhite;
+	font-weight: 700;
+	border: 2px solid $colorWhite;
+	padding: 13px 32px;
+	background-color: transparent;
+	cursor: pointer;
+	margin-bottom: 125px;
+}
+
+.intro__nav {
+	display: flex;
+	justify-content: space-between;
+	
+	padding-bottom: 30px;
+}
+
+.intro__nav a {
+	text-align: left;
+	width: 23%;
+	text-decoration: none;
+	color: $colorWhite;
+	opacity: .7;
+	font-size: 18px;
+	position: relative;
+	border-top: 3px solid #fff;
+	padding-top: 30px;
+
+}
+
+.intro__nav .active {
+	opacity: 1;
+
+	&:before {
+	content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+	}
+}
+

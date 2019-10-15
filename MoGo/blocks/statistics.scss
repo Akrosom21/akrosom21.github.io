@@ -1,0 +1,28 @@
+.statistics {
+	background-color: #95e1d3;
+}
+
+.statistics__inner {
+	display: flex;
+}
+
+.statistics__inner-item {
+	width: 24%;
+	text-align: center;
+	border: 1px solid rgba(181,234,224,.3);
+}
+
+.statistics__inner-item h2 {
+	color: $colorWhite;
+	font-weight: 700;
+	font-size: 72px;
+	padding-top: 82px;
+	padding-bottom: 8px;
+}
+
+.statistics__inner-item p {
+	color: $colorWhite;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-bottom: 86px;
+}

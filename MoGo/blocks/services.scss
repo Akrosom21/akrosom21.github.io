@@ -1,0 +1,60 @@
+.services__title {
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	padding-top: 109px;
+	padding-bottom: 23px;
+	color: #333;
+	font-weight: 400;
+}
+
+.services__text {
+	color: #333;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.services__inner {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.services__inner-item {
+	width: 33%;
+	padding-bottom: 55px;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.services__inner-item h3 {
+	color: #333;
+	padding-left: 90px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.services__inner-item p {
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 90px;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.border {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.services__inner-item img {
+	width: 32px;
+	height: auto;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 27px;
+
+}
+

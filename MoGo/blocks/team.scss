@@ -1,0 +1,126 @@
+.team__title {
+	text-align: center;
+}
+
+.team__title h3{
+	color: #333333;
+	font-size: 24px;
+	font-weight: 400;
+	font-family: 'Kaushan Script', cursive;
+	padding: 99px 0 23px;
+	
+}
+
+.team__title h2 {
+	color: #333333;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.team-text {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	padding-bottom: 92px;
+}
+
+.team__photos {
+	display: flex;
+	justify-content: space-between;
+}
+
+.team__items {
+	width: 32%;
+	display: flex;
+	flex-direction: column;
+}
+
+.team__inner {
+	background-color: #95e1d3;
+	position: relative;
+
+	&:hover .team__social{
+		display: flex;
+		transform: translate3d(-10px, -10px, 0);
+	}
+
+	&:hover .team__img {
+		transform: translate3d(-10px, -10px, 0);
+	}
+}
+
+.team__items ~ .team__items {
+	margin-left: 30px;
+}
+
+.team__img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	transition: transform .2s linear;
+}
+
+.team__social {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+	display: none;
+	transition: transform .2s linear;
+}
+
+.social-item {
+	width: 55px;
+    height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+    font-size: 30px;
+    text-decoration: none;
+    color: #f38181;
+    line-height: 1;
+    transition: color .2s linear;
+    transition: background-color .2s linear;
+
+    &:last-child {
+    	border-right: 0;
+    }
+
+    &:hover {
+    	background-color: #f38181;
+    	color: #ffffff;
+    }
+}
+
+.team__name {
+	text-align: center;
+
+	& h4 {
+		padding: 31px 0 15px;
+		color: #333333;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	& p{
+		margin: 0;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 24px;
+		font-family: 'Roboto', sans-serif;
+		font-style: italic;
+		padding-bottom: 117px;
+	}
+}

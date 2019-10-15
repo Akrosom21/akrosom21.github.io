@@ -1,0 +1,120 @@
+.wedo__title {
+	text-align: center;
+}
+
+.wedo__title h3 {
+	padding-top: 105px;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 24px;
+	color: #333;
+	font-weight: 400;
+}
+
+.wedo__title p {
+	color: #333;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	padding-top: 16px;
+	margin: 0;
+}
+
+.wedo__text  {
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 24px;
+}
+
+.wedo__stories {
+	margin-top: 86px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 120px;
+}
+
+.wedo-item {
+	width: 50%;
+}
+
+.wedo__stories-img img {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding-right: 30px;
+}
+
+.accordion-item {
+	border: 1px solid #e5e5e5;
+	margin-bottom: 10px;
+}
+
+.item-header {
+	
+	position: relative;
+	cursor: pointer;
+
+	& img {
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		z-index: 1;
+
+	transform: translateY(-50%);
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-top: 2px solid #cccccc;
+		border-right: 2px solid #cccccc;
+
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		z-index: 1;
+		transform: translateY(-50%) rotate(135deg);
+
+
+	}
+}
+
+.header-title {
+	color: #333;
+	font-size: 14px;
+	padding-left: 60px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.wedo .item-text {
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+	font-size: 15px;
+	line-height: 24px;
+	padding: 20px;
+	display: none;
+	max-height: 180px;
+	overflow: scroll;
+}
+
+.accordion-item.active
+.item-text {
+	display: block;
+}
+
+.accordion-item.active
+.item-header {
+	border-bottom: 1px solid #e5e5e5;
+	&:after {
+	transform: translateY(-50%);
+	transform: rotate(-45deg);
+	}
+}
