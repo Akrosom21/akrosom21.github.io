@@ -1,0 +1,35 @@
+.header {
+    background-color: #424242;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 0;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    padding-left: 26px;
+
+    &:hover {
+        color: rgb(224, 213, 213);
+    }
+}
+
+@media (max-width: 575px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav__link {
+        font-size: 14px;
+        padding-left: 10px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}

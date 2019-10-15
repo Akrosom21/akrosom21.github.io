@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/slick.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+      integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="nav__link">Sign in</a>
+          <a href="#" class="nav__link">My Account</a>
+          <a href="#" class="nav__link">Order Status</a>
+          <a href="#" class="nav__link">Help</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Intro -->
+
+    <div class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="logo">
+            <div class="logo__img-text">Books</div>
+            <div class="logo__text">online</div>
+          </div>
+          <div class="search">
+            <input type="text" class="search__input" />
+            <button class="search__button btn">
+              <i class="fa fa-search" aria-hidden="true"></i>Search
+            </button>
+          </div>
+          <div class="cart">
+            <div class="cart__text">
+              <img
+                src="img/intro/intro-cart.svg"
+                alt="cart"
+                class="cart__text-img"
+              />Your cart <span>(2 items)</span>
+            </div>
+            <div class="cart__price">
+              <div class="cart__price-text">$125.0</div>
+              <button class="cart__price-btn btn">Checkout</button>
+            </div>
+          </div>
+          <div class="wish">
+            <img src="img/intro/intro-star.svg" alt="Star" class="wish__img" />
+            <div class="wish__text">Wish list</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Books nav -->
+
+    <nav class="books-nav">
+      <div class="container">
+        <div class="books-nav__inner">
+          <a href="#" class="books-nav__link">Computers</a>
+          <a href="#" class="books-nav__link">Cooking</a>
+          <a href="#" class="books-nav__link">Education</a>
+          <a href="#" class="books-nav__link">Fiction</a>
+          <a href="#" class="books-nav__link hide">Health</a>
+          <a href="#" class="books-nav__link hide">Mathematics</a>
+          <a href="#" class="books-nav__link hide">Medical</a>
+          <a href="#" class="books-nav__link hide">Reference</a>
+          <a href="#" class="books-nav__link hide">Science</a>
+          <a href="#" class="books-nav__menu"></a>
+        </div>
+        <div class="books-nav__hide-menu menu-hide">
+            <a href="#" class="books-nav__link">Health</a>
+            <a href="#" class="books-nav__link">Mathematics</a>
+            <a href="#" class="books-nav__link">Medical</a>
+            <a href="#" class="books-nav__link">Reference</a>
+            <a href="#" class="books-nav__link">Science</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Books baner -->
+
+    <div class="books-baner">
+      <div class="container">
+        <div class="books-baner__inner">
+          <div class="slick__inner">
+            <div class="slick__item">
+              <div class="book-preview">
+                <div class="book-preview__imgs">
+                  <img
+                    src="img/books-baner/book_lee-child_a-wanted-man.png"
+                    alt="book-preview"
+                    class="book-preview__book"
+                  />
+                  <img
+                    src="img/books-baner/film_lee-child_a-wanted-man.png"
+                    alt="Film-preview"
+                    class="book-preview__film"
+                  />
+                </div>
+                <div class="book-preview__text">
+                  <h1 class="book-preview__title">A Wanted Man</h1>
+                  <div class="book-preview__subtitle">(Jack Reacher #17)</div>
+                  <div class="book-preview__author">By Lee Child</div>
+                </div>
+              </div>
+            </div>
+            <div class="slick__item">
+              <div class="book-preview">
+                <div class="book-preview__imgs">
+                  <img
+                    src="img/books-baner/book_lee-child_a-wanted-man.png"
+                    alt="book-preview"
+                    class="book-preview__book"
+                  />
+                  <img
+                    src="img/books-baner/film_lee-child_a-wanted-man.png"
+                    alt="Film-preview"
+                    class="book-preview__film"
+                  />
+                </div>
+                <div class="book-preview__text">
+                  <h1 class="book-preview__title">A Wanted Man</h1>
+                  <div class="book-preview__subtitle">(Jack Reacher #17)</div>
+                  <div class="book-preview__author">By Lee Child</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sale-baner">
+            <h2 class="sale-baner__title">Deal of the Month</h2>
+            <div class="sale-baner__subtitle">The Human Face of Big Data</div>
+            <div class="sale-baner__imgs">
+              <img
+                src="img/books-baner/big-data.png"
+                alt="Book"
+                class="sale-baner__book"
+              />
+              <img
+                src="img/books-baner/stand.png"
+                alt="Stand"
+                class="sale-baner__stand"
+              />
+            </div>
+            <div class="sale-baner__percent">Save 45% Today</div>
+            <div class="sale-baner__price">$27.50</div>
+            <button class="sale-baner__btn btn">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main -->
+
+    <main class="main">
+      <div class="container">
+        <div class="main__inner">
+          <!-- Side -->
+
+          <div class="side">
+            <div class="side__title">Categories</div>
+            <a href="#" class="side__category">ALL</a>
+            <div class="side__genre">Fiction & Literature</div>
+            <ul class="side__list">
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Children</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Science Fiction</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Fantasy</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Mystery</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Romance</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Horror</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Poetry</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Literature</a>
+              </li>
+              <li class="side__list-item no-border">
+                <a href="#" class="side__list-link">Crime</a>
+              </li>
+            </ul>
+            <div class="side__genre">Non - Fiction</div>
+            <ul class="side__list">
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Comic</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Cook</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Psychology</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Medical</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Art</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Photography</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Law</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">History</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Business</a>
+              </li>
+              <li class="side__list-item no-border">
+                <a href="#" class="side__list-link">Computer</a>
+              </li>
+            </ul>
+            <div class="side__genre">Other</div>
+            <div class="side__list">
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Baby</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Sex</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Travel</a>
+              </li>
+              <li class="side__list-item">
+                <a href="#" class="side__list-link">Science</a>
+              </li>
+              <li class="side__list-item no-border">
+                <a href="#" class="side__list-link">Sports</a>
+              </li>
+            </div>
+          </div>
+
+          <!-- Content -->
+
+          <div class="content">
+            <div class="tab">
+              <input type="radio" id="best-sellers" name="tab-group" checked />
+              <label for="best-sellers" class="tab-title tab-title_first"
+                >Best sellers</label
+              >
+              <div class="tab-content">
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book1.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__sale">30% <span>off</span></div>
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$50</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book2.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$60</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book3.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__sale">30% <span>off</span></div>
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$25</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book4.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$80</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book5.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book6.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book7.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$150</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book8.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__sale">30% <span>off</span></div>
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$100</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book9.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$152</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book10.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book11.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$220</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book12.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$10</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book13.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$22</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book14.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__sale">30% <span>off</span></div>
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$300</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book15.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$205</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="new-arrivals" name="tab-group" />
+              <label for="new-arrivals" class="tab-title">New Arrivals</label>
+              <div class="tab-content">
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book1.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$50</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book2.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$60</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book3.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$25</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book4.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$80</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book5.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book6.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book7.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$150</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book8.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$100</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book9.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$152</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book10.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book11.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$220</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book12.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$10</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book13.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$22</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book14.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$300</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book15.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$205</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="used-books" name="tab-group" />
+              <label for="used-books" class="tab-title">Used Books</label>
+              <div class="tab-content">
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book1.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$50</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book2.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$60</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book3.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$25</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book4.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$80</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book5.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book6.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book7.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$150</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book8.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$100</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book9.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$152</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book10.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book11.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$220</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book12.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$10</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book13.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$22</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book14.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$300</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book15.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$205</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="specials-offers" name="tab-group" />
+              <label for="specials-offers" class="tab-title"
+                >Special Offers</label
+              >
+              <div class="tab-content">
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book1.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$50</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book2.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$60</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book3.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$25</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book4.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$80</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book5.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book6.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book7.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$150</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book8.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$100</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book9.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$152</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book10.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$200</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book11.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$220</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book12.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The war of <br />Art</div>
+                  <div class="tab-content__price">$10</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book13.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Hare With Amber Eyes</div>
+                  <div class="tab-content__price">$22</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book14.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">The Immortals of Meluha</div>
+                  <div class="tab-content__price">$300</div>
+                </div>
+                <div class="tab-content__book">
+                  <img
+                    src="img/content/book15.png"
+                    alt="Book"
+                    class="tab-content__img"
+                  />
+                  <div class="tab-content__title">Life Is What You Make It</div>
+                  <div class="tab-content__price">$205</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content__nav">
+              <a href="#" class="tab-content__link active">1</a>
+              <a href="#" class="tab-content__link">2</a>
+              <a href="#" class="tab-content__link">3</a>
+              <a href="#" class="tab-content__link">4</a>
+              <a href="#" class="tab-content__link">5</a>
+              <a href="#" class="tab-content__link">6</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__category">
+            <div class="footer__item">
+              <div class="footer__title">Biography & True Stories</div>
+              <a href="#" class="footer__link">General</a>
+              <a href="#" class="footer__link">Diaries, Letters & Journals</a>
+              <a href="#" class="footer__link">Memoirs</a>
+              <a href="#" class="footer__link">True Stories</a>
+              <a href="#" class="footer__link">Generic Exams</a>
+              <a href="#" class="footer__link">GK Titles</a>
+              <a href="#" class="footer__link">Medical Entrance</a>
+              <a href="#" class="footer__link">Other Entrance Exams</a>
+              <a href="#" class="footer__link">PG Entrance Examinations</a>
+              <a href="#" class="footer__link">Self-help Titles</a>
+              <a href="#" class="footer__link footer__link_no-border"
+                >Sociology</a
+              >
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">Professional & Reference</div>
+              <a href="#" class="footer__link">Academic and Reference</a>
+              <a href="#" class="footer__link">Business Trade</a>
+              <a href="#" class="footer__link"
+                >Engineering and Computer Science</a
+              >
+              <a href="#" class="footer__link"
+                >Humanities, Social Sciences and Languages</a
+              >
+              <a href="#" class="footer__link">Introduction to Computers</a>
+              <a href="#" class="footer__link">Science and Maths</a>
+              <a href="#" class="footer__link">Trade Business</a>
+              <a href="#" class="footer__link">English Language & Literature</a>
+              <a href="#" class="footer__link">English Language Teaching</a>
+              <a href="#" class="footer__link">Environment Awareness</a>
+              <a href="#" class="footer__link footer__link_no-border"
+                >Environment Protection</a
+              >
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">Earth Sciences</div>
+              <a href="#" class="footer__link">Earth Sciences</a>
+              <a href="#" class="footer__link">Geography</a>
+              <a href="#" class="footer__link">The Environment</a>
+              <a href="#" class="footer__link">Regional & Area Planning</a>
+              <a href="#" class="footer__link">Fantasy</a>
+              <a href="#" class="footer__link">Gay</a>
+              <a href="#" class="footer__link">Humorous</a>
+              <a href="#" class="footer__link">Interactive</a>
+              <a href="#" class="footer__link">Legal</a>
+              <a href="#" class="footer__link">Lesbian</a>
+              <a href="#" class="footer__link footer__link_no-border"
+                >Men'S Adventure</a
+              >
+            </div>
+            <div class="footer__item">
+              <div class="footer__title">Mathematics</div>
+              <a href="#" class="footer__link">Algebra</a>
+              <a href="#" class="footer__link">Differential Equations</a>
+              <a href="#" class="footer__link">Discrete Mathematics</a>
+              <a href="#" class="footer__link">Fourier Analysis</a>
+              <a href="#" class="footer__link">Numerical Analysis</a>
+              <a href="#" class="footer__link">Probability</a>
+              <a href="#" class="footer__link"
+                >Statistical Methods/data Analysis</a
+              >
+              <a href="#" class="footer__link"
+                >Stochastic And Random Processes</a
+              >
+              <a href="#" class="footer__link">Topology</a>
+              <a href="#" class="footer__link">Statistics</a>
+              <a href="#" class="footer__link footer__link_no-border"
+                >Mathematics</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bank">
+        <div class="footer__card">
+          We accept all major Credit Card/Debit Card/Internet Banking
+        </div>
+        <div class="footer_card-items">
+          <img
+            src="img/footer/master-card.png"
+            alt="mastercard"
+            class="footer__img"
+          />
+          <img
+            src="img/footer/american-express.png"
+            alt="American Express"
+            class="footer__img"
+          />
+          <img src="img/footer/visa.png" alt="visa" class="footer__img" />
+        </div>
+        <div class="footer__copy">
+          Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its
+          affiliates
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

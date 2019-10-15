@@ -1,0 +1,77 @@
+.books-nav {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+}
+
+.books-nav__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.books-nav__link {
+    text-decoration: none;
+    color: #5b5b5b;
+    font-family: "Segoe UI Symbol";
+    font-size: 19px;
+    font-weight: 400;
+    padding: 12px 11px;
+
+    &:focus {
+        background-image: linear-gradient(to top, #79b260 0%, #92d774 100%);
+        color: #fff;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to top, #79b260 0%, #92d774 100%);
+        color: #fff;
+    }
+}
+
+.books-nav__menu {
+    display: none;
+    border-top: 1px solid #5b5b5b;;
+    border-right: 1px solid #5b5b5b;;
+    width: 10px;
+    height: 10px;
+    margin-top: 4px;
+    transform: rotate(135deg);
+}
+
+.books-nav__hide-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.menu-hide {
+    display: none;
+}
+
+@media (max-width: 990px) {
+    .books-nav__link {
+        font-size: 15px;
+        padding: 8px 7px;
+    }
+}
+
+@media (max-width: 770px) {
+    .books-nav__link {
+        font-size: 13px;
+        padding: 5px 4px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hide {
+        display: none;
+    }
+
+    .books-nav__menu {
+        display: block;
+    }
+}
