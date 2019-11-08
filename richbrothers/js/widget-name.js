@@ -36,7 +36,7 @@ function widget_herd_instinct(data) {
       $('.widget_herd_instinct span.res_city').html(peopleList[Math.floor(Math.random() * (13 - 0 + 1)) + 0][1]);
       $('.widget_herd_instinct span.time').html(timeList[Math.floor(Math.random() * (5 - 0 + 1)) + 0]);
       $('.widget_herd_instinct').addClass('open_widget');
-      setTimeout(hide_widget, 10000);
+      setTimeout(hide_widget, 5000);
     }
 
   }

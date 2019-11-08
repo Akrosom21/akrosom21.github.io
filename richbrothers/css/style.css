@@ -201,7 +201,10 @@ a {
   .intro__text {
     max-width: 340px;
     line-height: 170%;
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px; }
     .intro__text span {
       font-size: 14px; }
   .video-title {
@@ -213,24 +216,29 @@ a {
   .widget_herd_instinct .reserv {
     padding-bottom: 0 !important;
     padding-top: 0 !important; }
+  .widget_herd_instinct .reserv .time {
+    margin-top: 5px !important; }
   .special-title {
-    max-width: 300px;
     margin: 0 auto;
     font-size: 23px;
     line-height: 150%;
-    font-weight: 400; }
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px; }
   .special-text {
-    max-width: 300px;
     font-size: 16px;
     line-height: 140%;
     font-weight: 400;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px; }
   .time__text {
     max-width: 300px;
     padding-bottom: 15px;
     margin: 0 auto;
     font-size: 18px;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-top: 20px; }
   .intro__top {
     flex-wrap: wrap;
     justify-content: center; }
