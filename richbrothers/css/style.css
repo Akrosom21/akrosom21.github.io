@@ -41,6 +41,14 @@ a {
   margin-left: 58px;
   font-size: 18px; }
 
+@media (max-width: 770px) {
+  .warning-img {
+    display: none; }
+  .header__text {
+    margin-left: 0;
+    width: 80%;
+    font-size: 16px; } }
+
 .intro {
   background: url("../img-min/intro-bg.jpg") no-repeat center;
   background-size: cover; }
@@ -183,9 +191,45 @@ a {
     margin-right: 20px; } }
 
 @media (max-width: 770px) {
+  .intro__title {
+    color: #ff9716;
+    font-size: 20px;
+    font-weight: 400; }
+  .time__inner {
+    margin-right: -30px; }
+  .intro__text {
+    max-width: 340px;
+    line-height: 170%;
+    font-size: 14px; }
+    .intro__text span {
+      font-size: 14px; }
+  .video-title {
+    font-size: 16px;
+    font-weight: 400; }
   .widget_herd_instinct.open_widget {
-    width: 277px;
-    min-height: 60px; }
+    width: 90%;
+    height: 50px; }
+  .widget_herd_instinct .reserv {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important; }
+  .special-title {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 23px;
+    line-height: 150%;
+    font-weight: 400; }
+  .special-text {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    margin: 0 auto; }
+  .time__text {
+    max-width: 300px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    font-size: 18px;
+    padding-right: 0; }
   .intro__top {
     flex-wrap: wrap;
     justify-content: center; }
@@ -193,12 +237,13 @@ a {
     padding-top: 20px;
     order: 2; }
   .intro__top .logo {
-    width: 45%; }
+    width: 45%;
+    display: none; }
   .contacts {
-    width: 35%; }
+    width: 35%;
+    display: none; }
   .time {
-    flex-wrap: wrap;
-    padding-top: 50px; } }
+    flex-direction: column; } }
 
 @media (max-width: 575px) {
   .countdown-amount {
@@ -311,12 +356,13 @@ a {
   display: none; }
 
 .checkbox + label:before {
-  content: "\2713";
+  content: ">";
+  transform: rotateZ(90deg);
   color: transparent;
   display: inline-block;
   border: 2px solid rgba(0, 0, 0, 0.25);
   font-size: 20px;
-  line-height: 22px;
+  line-height: 18px;
   margin: 0 5.5px 0 0;
   height: 22px;
   width: 22px;
@@ -341,7 +387,8 @@ input[type=checkbox]:checked + label:before {
   padding-bottom: 66px; }
 
 .how {
-  width: 40%; }
+  width: 40%;
+  display: none; }
 
 .how__title {
   padding-top: 66px;
@@ -552,7 +599,6 @@ input[type=checkbox]:checked + label:before {
 .widget_herd_instinct .reserv .time {
   display: block;
   font-size: 12px;
-  line-height: 140%;
   padding-left: 20px;
   margin-top: 10px;
   max-width: 100px; }

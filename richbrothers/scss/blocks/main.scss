@@ -102,12 +102,16 @@
 }
 
 .checkbox + label:before {
-    content: "\2713";
+    content: ">";
+    transform: rotateZ(90deg);
     color: transparent;
     display: inline-block;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
     border: 2px solid rgba(0, 0, 0, 0.25);
     font-size: 20px;    
-    line-height: 22px;
+    line-height: 18px;
     margin: 0 5.5px 0 0;
     height: 22px;
     width: 22px;
@@ -136,6 +140,7 @@ input[type=checkbox]:checked + label:before {
 
 .how {
     width: 40%;
+    display: none;
 }
 
 .how__title {

@@ -10,3 +10,15 @@
     margin-left: 58px;
     font-size: 18px;
 }
+
+@media (max-width: 770px) {
+    .warning-img {
+        display: none;
+    }
+
+    .header__text {
+        margin-left: 0;
+        width: 80%;
+        font-size: 16px;
+    }
+}
