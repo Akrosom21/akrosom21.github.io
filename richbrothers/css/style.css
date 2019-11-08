@@ -203,7 +203,18 @@ a {
     font-size: 60px; }
   .contacts {
     width: 70%;
-    padding-top: 30px; } }
+    padding-top: 30px; }
+  .video-responsive {
+    position: relative;
+    max-width: 400px;
+    height: 200px;
+    margin: 0 auto; }
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; } }
 
 .main {
   padding-top: 45px;
