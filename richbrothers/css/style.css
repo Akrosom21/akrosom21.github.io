@@ -170,6 +170,13 @@ a {
     left: 230px;
     z-index: 1; }
 
+.pro-bar {
+  display: flex;
+  flex-direction: column; }
+
+.pro-bar__text {
+  font-size: 16px; }
+
 @media (max-width: 990px) {
   .intro__top {
     margin-left: 20px;
@@ -182,7 +189,8 @@ a {
   .intro__top {
     flex-wrap: wrap;
     justify-content: center; }
-  .ui-progress-bar {
+  .pro-bar {
+    padding-top: 20px;
     order: 2; }
   .intro__top .logo {
     width: 45%; }
