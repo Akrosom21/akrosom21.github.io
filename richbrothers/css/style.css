@@ -396,8 +396,7 @@ input[type=checkbox]:checked + label:before {
   padding-bottom: 66px; }
 
 .how {
-  width: 40%;
-  display: none; }
+  width: 40%; }
 
 .how__title {
   padding-top: 66px;
@@ -443,7 +442,9 @@ input[type=checkbox]:checked + label:before {
 @media (max-width: 770px) {
   .about__btn {
     font-size: 16px;
-    padding: 10px 18px; } }
+    padding: 10px 18px; }
+  .how {
+    display: none; } }
 
 @media (max-width: 575px) {
   .about__btn {

@@ -140,7 +140,6 @@ input[type=checkbox]:checked + label:before {
 
 .how {
     width: 40%;
-    display: none;
 }
 
 .how__title {
@@ -193,6 +192,7 @@ input[type=checkbox]:checked + label:before {
         padding-right: 0;
     }
 
+
     .how__title {
         padding-top: 0;
     }
@@ -203,6 +203,11 @@ input[type=checkbox]:checked + label:before {
         font-size: 16px;
         padding: 10px 18px;
     }
+
+    .how {
+        display: none;
+    }
+
 }
 
 @media (max-width: 575px) {
