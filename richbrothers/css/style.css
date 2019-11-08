@@ -194,7 +194,8 @@ a {
   .intro__title {
     color: #ff9716;
     font-size: 20px;
-    font-weight: 400; }
+    font-weight: 400;
+    padding-top: 10px; }
   .time__inner {
     margin-right: -30px; }
   .intro__text {
