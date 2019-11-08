@@ -88,6 +88,9 @@ THE SOFTWARE.
   /* Adjust to your liking, and don't forget to adjust to the same amount in .ui-progress-bar */
   
   border-radius: 90px;
+
+  /* border-top-right-radius: 0;
+  border-bottom-right-radius: 0; */
   
   /* Set the background size so the stripes work correctly */
    /* Webkit */
