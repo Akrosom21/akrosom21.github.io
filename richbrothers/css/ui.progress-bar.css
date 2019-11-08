@@ -45,7 +45,7 @@ THE SOFTWARE.
   padding-right: 2px;
   
   /* For browser that don't support gradients, we'll set a blanket background colour */
-  background: -webkit-gradient(linear, 0 0, 44 44,
+  /* background: -webkit-gradient(linear, 0 0, 44 44,
     color-stop(0.00, rgba(255,255,255,0.17)),
     color-stop(0.25, rgba(255,255,255,0.17)),
     color-stop(0.26, rgba(255,255,255,0)),
@@ -54,9 +54,11 @@ THE SOFTWARE.
     color-stop(0.75, rgba(255,255,255,0.17)),
     color-stop(0.76, rgba(255,255,255,0)),
     color-stop(1.00, rgba(255,255,255,0))
-  ), -webkit-gradient(linear, left bottom, left top, color-stop(0, #74d04c), color-stop(1, #9bdd62));
+  ), -webkit-gradient(linear, left bottom, left top, color-stop(0, #74d04c), color-stop(1, #9bdd62)); */
 
-  
+  background:
+    repeating-linear-gradient(135deg, 
+    #ffd27f, #ffd27f 4px, #fff 0, #fff 10px);
   /* Rounds the ends, we specify an excessive amount to make sure they are completely rounded */
   /* Adjust to your liking, and don't forget to adjust to the same amount in .ui-progress */
   border-radius: 90px;
