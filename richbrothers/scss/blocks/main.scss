@@ -1,0 +1,226 @@
+.main {
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    color: rgb(51, 51, 51);
+}
+
+.about {
+    width: 44%;
+    padding-right: 40px;
+}
+
+.about__inner {
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 26px 0px rgba(0, 0, 0, 0.5);
+}
+
+.about-img {
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 55px;
+}
+
+.about__title {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 400;
+    padding-bottom: 95px;
+}
+
+.about__list {
+    text-align: left;
+    padding: 0;
+    padding-left: 42px;
+}
+
+.about__list-item {
+    padding-bottom: 28px;
+    font-size: 16px;
+
+    & span {
+        font-weight: 700;
+    }
+}
+
+.about__arrows {
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.about__btn {
+    color: #000;
+    font-size: 22px;
+    line-height: 1.42;
+    font-weight: 700;
+    background-color: rgb(254, 205, 0);
+    border-radius: 25px;
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 6px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-color: rgb(255, 202, 51);
+    padding: 14px 28px;
+    box-shadow: 0px 11px 5px -7px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 29px;
+
+    &:hover {
+        background-color: rgba(254, 205, 0, 0.77);
+        border-color: rgb(245, 181, 0);
+        color: rgb(0, 0, 0);
+    }
+}
+
+.about__politic {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    text-decoration: underline;
+    padding-top: 43px;
+    padding-bottom: 37px;
+}
+
+.checkbox__text {
+    font-size: 12.8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.check-border {
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox + label:before {
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    font-size: 20px;    
+    line-height: 22px;
+    margin: 0 5.5px 0 0;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    border-radius: 2px;
+}
+
+input[type=checkbox]:checked + label:before {
+    border-color: rgb(13, 90, 223);
+    background-color: rgb(22, 102, 241);
+    color: #fff;
+}
+
+.about__desc {
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 405px;
+    margin: 0 auto;
+    padding-top: 64px;
+    text-align: left;
+    color: #555;
+    padding-bottom: 66px;
+}
+
+.how {
+    width: 40%;
+}
+
+.how__title {
+    padding-top: 66px;
+    padding-bottom: 70px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+
+}
+
+.plan__text {
+    font-size: 24px;
+    // padding-left: 48px;
+    padding-right: 13px;
+}
+
+.education__text {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.faq__text {
+    font-size: 24px;
+    padding-right: 15px;
+}
+
+.matherials__text {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+    padding-left: 15px;
+}
+
+@media (max-width: 990px) {
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .about {
+        width: 70%;
+        padding-right: 0;
+    }
+
+    .how__title {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 770px) {
+    .about__btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about__btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .about__title {
+        font-size: 18px;
+        padding-bottom: 40px;
+    }
+
+    .about__list-item {
+        font-size: 14px;
+    }
+
+    .about__inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about {
+        width: 90%;
+    }
+}

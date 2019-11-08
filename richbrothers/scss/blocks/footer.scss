@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    background-color: rgb(44, 51, 64);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.copy {
+    padding-top: 17px;
+    margin-left: 170px;
+    font-size: 16px;
+
+    & span {
+        padding-top: 15px;
+        padding-bottom: 19px;
+        display: block;
+    }
+}
+
+.rules {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.logo {
+    height: 90px;
+}
+
+@media (max-width: 990px) {
+    .footer .logo {
+        margin-left: 15px;
+    }
+
+    .copy {
+        margin-left: 70px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 770px) {
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .copy {
+        width: 70%;
+        padding-top: 40px;
+        margin-left: 0;
+    }
+}
