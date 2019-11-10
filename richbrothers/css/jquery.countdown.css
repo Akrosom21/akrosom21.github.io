@@ -15,6 +15,9 @@
 	padding: 0px 2px;
 	text-align: center;
 }
+.countdown-section:last-child {
+	color: #FAAC4C;
+}
 .countdown-show1 .countdown-section {
 	width: 98%;
 }

@@ -8,7 +8,7 @@
 
 .header__text {
     margin-left: 58px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media (max-width: 770px) {
@@ -20,5 +20,10 @@
         margin-left: 0;
         width: 80%;
         font-size: 16px;
+        line-height: 170%;
+    }
+
+    .header {
+        height: 108px;
     }
 }

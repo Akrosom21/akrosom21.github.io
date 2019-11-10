@@ -1,4 +1,5 @@
-widget_herd_instinct([10, 10, 30, 50, 40, 70, 80]);
+// widget_herd_instinct([10, 10, 30, 50, 40, 70, 80]);
+widget_herd_instinct([7, 16, 27, 41, 50, 61, 75, 84]);
 
 
 function widget_herd_instinct(data) {
@@ -36,7 +37,7 @@ function widget_herd_instinct(data) {
       $('.widget_herd_instinct span.res_city').html(peopleList[Math.floor(Math.random() * (13 - 0 + 1)) + 0][1]);
       $('.widget_herd_instinct span.time').html(timeList[Math.floor(Math.random() * (5 - 0 + 1)) + 0]);
       $('.widget_herd_instinct').addClass('open_widget');
-      setTimeout(hide_widget, 5000);
+      setTimeout(hide_widget, 4000);
     }
 
   }
@@ -75,7 +76,7 @@ function widget_herd_instinct(data) {
   var timeList = ['только что', '1 мин. назад', '5 мин. назад', '3 мин. назад', '10 мин. назад', '4 мин. назад'];
 
   // ADD HTML MODAL WINDOW
-  $('body').append("<div class='widget_herd_instinct'><div class='cross-button'>+</div><div class='ticket'></div><p class='reserv'><span class='res_name'>" + data.name + "</span> из г. <span class='res_city'>" + data.city + "</span> <br>Получил(а) доступ к Digital Marketing Академии<span class='time'>" + data.time + "</span></p><button class='hidden-audio-button'></button></div>");
+  $('body').append("<div class='widget_herd_instinct'><div class='cross-button'>+</div><div class='ticket'></div><p class='reserv'><span class='res_name'>" + data.name + "</span> из г. <span class='res_city'>" + data.city + "</span> <br>Получил(а) доступ к RichBRO Community<span class='time'>" + data.time + "</span></p><button class='hidden-audio-button'></button></div>");
 
   // SET COOKIE DATA
 
