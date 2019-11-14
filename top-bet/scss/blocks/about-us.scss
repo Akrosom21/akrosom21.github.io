@@ -1,0 +1,95 @@
+.sample {
+    display: flex;
+    padding-top: 75px;
+    justify-content: space-between;
+    max-width: 1050px;
+}
+
+.sample__item {
+    display: flex;
+    align-items: center;
+}
+
+.sample__text {
+    padding-left: 31px;
+    letter-spacing: 2.4px;
+}
+
+.intro__subtitle {
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    font-family: 'FuturaDemiC', sans-serif;
+}
+
+.sample__icon {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'FuturaDemiC', sans-serif;
+    font-size: 36px;
+
+    &_one {
+        width: 52px;
+        height: 61px;
+        background: url('../img-min/about-1.png') no-repeat center;
+    }
+
+    &_two {
+        width: 49px;
+        height: 64px;
+        background: url('../img-min/about-2.png') no-repeat center;
+    }
+
+    &_three {
+        width: 59px;
+        height: 61px;
+        background: url('../img-min/about-3.png') no-repeat center;
+    }
+}
+
+.try {
+    background: url('../img-min/referal-bg.png') no-repeat center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 225px;
+    position: relative;
+    z-index: 99999;
+    margin-top: -350px;
+    margin-bottom: -340px;
+    height: 775px;
+}
+
+.height_about-us {
+    height: 450px;
+}
+
+@media (max-width: 1800px) {
+    .referal-top {
+        top: -100px;
+    }
+}
+
+@media (max-width: 770px) {
+    .referal-top {
+        display: none;
+    }
+
+    .height_about-us {
+        height: 250px;
+    }
+
+    .intro__subtitle {
+        font-size: 25px;
+    }
+
+    .sample {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sample__item {
+        margin-bottom: 15px;
+    }
+}

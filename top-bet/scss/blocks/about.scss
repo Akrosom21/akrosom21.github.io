@@ -1,0 +1,36 @@
+.about {
+    position: relative;
+    background:  url('../img-min/about-bg.png') no-repeat center;
+    background-size: cover;
+    top: -400px;
+}
+
+.about__inner {
+    position: relative;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    padding-top: 307px;
+}
+
+.section__text_wide {
+    max-width: 996px;
+}
+
+.about__img {
+    margin-left: 88px;
+}
+
+.height {
+    height: 275px;
+}
+
+@media (max-width: 770px) {
+    .about__img {
+        display: none;
+    }
+
+    .about__inner {
+        padding-top: 207px;
+    }
+}

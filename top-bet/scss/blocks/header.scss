@@ -1,0 +1,140 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 64px;
+}
+
+.burger-menu {
+    cursor: pointer;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.burger {
+    position: relative;
+    width: 45px;
+    height: 4px;
+    background-color: #76c358;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 45px;
+        height: 4px;
+        background-color: #76c358;
+        position: absolute;
+        top: -15px;
+        z-index: 1;
+        border-radius: 4px;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 45px;
+        height: 4px;
+        background-color: #76c358;
+        position: absolute;
+        top: 15px;
+        z-index: 1;
+        border-radius: 4px;
+    }
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 187px;
+}
+
+.header__enter {
+    margin-left: auto;
+    margin-right: 33px;
+    text-decoration: none;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    color: #fff;
+
+    &:hover {
+        color: #d4e6eb;
+    }
+
+    &_main-menu {
+        font-family: 'FuturaBookC', sans-serif;
+        margin-right: 50px;
+    }
+}
+
+.header__reg {
+    font-family: 'FuturaBookC', sans-serif;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: #2b4c55;
+    padding: 4px 30px;
+
+    &:hover {
+        background-color: #3f646e;
+    }
+}
+
+@media (min-width: 1390px) {
+    .burger-menu {
+        position: relative;
+        left: -230px;
+    }
+
+    .logo {
+        margin-left: -45px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .logo {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 990px) {
+    .header__inner {
+        flex-wrap: wrap;
+    }
+    .header__reg {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 770px) {
+    .header__reg_fade {
+        display: none;
+    }
+    .header__enter_fade {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .header__inner {
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        transform: scale(0.7);
+        margin-left: 0;
+    }
+
+    .header__inner {
+        justify-content: start;
+    }
+}

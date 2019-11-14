@@ -1,0 +1,241 @@
+.enter {
+    position: absolute;
+    z-index: 999999999999999;
+    top: 10vh;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.41);
+    background-color: #315d5c;
+    background-image: linear-gradient(to bottom, rgba(118, 215, 91, 0.34) 0%, rgba(43, 76, 85, 0.34) 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 60px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    & input {
+        width: 884px;
+        height: 84px;
+        border-radius: 42px;
+        background-color: #2b4c55;
+        border: 0;
+        margin: 0 130px;
+        outline: none;
+        color: #fff;
+    }
+}
+
+.enter__title {
+    padding-top: 35px;
+    padding-bottom: 103px;
+    font-size: 62px;
+    font-family: 'FuturaDemiC', sans-serif;
+    letter-spacing: 4.8px;
+
+    &_main-menu {
+        padding-top: 45px;
+        padding-bottom: 113px;
+    }
+}
+
+.enter__text {
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    padding-bottom: 20px;
+}
+
+.enter__btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 3.6px;
+    padding: 24px 70px;
+    border-radius: 37px;
+    background-color: #2b4c55;
+    margin-top: 82px;
+    margin-bottom: 124px;
+}
+
+.enter__email{
+    margin-bottom: 60px !important;
+}
+
+
+
+.reg {
+    position: absolute;
+    z-index: 999999999999999;
+    top: 10vh;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.41);
+    background-color: #315d5c;
+    background-image: linear-gradient(to bottom, rgba(118, 215, 91, 0.34) 0%, rgba(43, 76, 85, 0.34) 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 60px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    & input {
+        width: 884px;
+        height: 84px;
+        border-radius: 42px;
+        background-color: #2b4c55;
+        border: 0;
+        margin: 0 130px;
+        outline: none;
+        color: #fff;
+    }
+}
+
+.reg__title {
+    font-family: 'FuturaDemiC', sans-serif;
+    font-size: 48px;
+    letter-spacing: 4.8px;
+    padding-top: 41px;
+    padding-bottom: 65px;
+}
+
+.no-pass {
+    letter-spacing: 2.4px;
+    padding-bottom: 53px;
+}
+
+.reg__email {
+    margin-bottom: 47px !important;
+}
+
+.reg__password {
+    margin-bottom: 46px !important;
+}
+
+.reg__btn {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.reg__pers {
+    margin: 47px auto;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+}
+
+.main-menu {
+    position: absolute;
+    z-index: 9999999999999;
+    top: 10vh;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.41);
+    background-color: #315d5c;
+    background-image: linear-gradient(to bottom, rgba(118, 215, 91, 0.34) 0%, rgba(43, 76, 85, 0.34) 100%);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 60px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 280px;
+}
+
+.main-menu__link {
+    font-size: 62px;
+    letter-spacing: 6.2px;
+    font-family: 'FuturaBookC', sans-serif;
+    padding-bottom: 42px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btns {
+    display: flex;
+    padding-bottom: 67px;
+}
+
+
+
+.active {
+    display: flex;
+}
+
+@media (max-width: 1430px) {
+
+        .enter input {
+            width: 500px;
+            margin: 0 50px;
+        }
+
+        .reg input {
+            width: 500px;
+            margin: 0 50px;
+        }
+
+        .enter__title {
+            padding-bottom: 35px;
+        }
+
+        .enter__btn {
+            margin-bottom: 50px;
+        }
+
+        .main-menu {
+            padding: 0 120px;
+        }
+}
+
+@media (max-width: 770px) {
+
+    .enter input {
+        width: 250px;
+        height: 40px;
+        margin: 0 20px;
+    }
+
+    .reg input {
+        width: 250px;
+        height: 40px;
+        margin: 0 20px;
+    }
+
+    .enter__title, .reg__title {
+        padding-bottom: 35px;
+        font-size: 35px;
+    }
+
+    .enter__text {
+        font-size: 25px;
+    }
+
+    .enter__email {
+        margin-bottom: 10px !important;
+    }
+
+    .enter__btn {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+
+    .main-menu__link {
+        font-size: 35px;
+    }
+
+    .main-menu {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__enter_main-menu {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-menu {
+        padding: 0 20px;
+    }
+}
