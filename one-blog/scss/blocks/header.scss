@@ -1,0 +1,39 @@
+.header {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #f6f6f6;
+    padding-top: 14px;
+    padding-bottom: 12px;
+}
+
+.icon {
+    margin-right: 15px;
+}
+
+.mail-address {
+    margin-right: 31px;
+    color: #8b8b8b;
+    white-space: nowrap;
+}
+
+.phone-link {
+    color: #8b8b8b;
+    white-space: nowrap;
+}
+
+.account {
+    letter-spacing: 0.33px;
+    color: #8b8b8b;
+    padding-right: 32px;
+    white-space: nowrap;
+}
+
+@media (max-width: 575px) {
+    .header__info, .account {
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .account {
+        padding-right: 0;
+    }
+}

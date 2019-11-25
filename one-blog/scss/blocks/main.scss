@@ -1,0 +1,123 @@
+.news {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.news__item {
+    margin-bottom: 60px;
+}
+
+.news__item-preview {
+    width: 100%;
+    height: 300px;
+    border: 5px solid #f7f7f7;
+    display: flex;
+}
+
+.date {
+    justify-self: self-start;
+    align-self: flex-end;
+    width: 50px;
+    height: 50px;
+    background-color: #ff7f00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.date__num {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.date__mon {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.news__item-desc {
+    background-color: #f7f7f7;
+    width: 100%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.news__item-title {
+    color: #222222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 26px;
+}
+
+.news__item-text {
+    padding-bottom: 28px;
+    max-width: 329px;
+}
+
+.news__item-social {
+    padding-bottom: 25px;
+}
+
+.more-link {
+    width: 75px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 30px;
+    color: #222222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: #ff7f00;
+        border: 0;
+        color: #ffffff;
+    }
+}
+
+.social-img {
+    width: 15px;
+    height: 13px;
+    margin-right: 9px;
+}
+
+.news__item-social-text_padding {
+    padding-left: 29px;
+    padding-right: 29px;
+}
+
+.concat__item {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear;
+    
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: #ff7f00;
+        color: #ffffff;
+        border: 0;
+    }
+}
