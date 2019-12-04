@@ -1,0 +1,402 @@
+.collective {
+
+    .section__title {
+        margin-bottom: 58px;
+    }
+
+    .festivals__inner {
+        margin-right: 20px;
+        width: 564px;
+
+        & .select {
+            width: 564px;
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+        margin-bottom: 241px;
+    }
+
+    .periods {
+        margin-bottom: 40px;
+
+        &_str {
+            margin-left: 0;
+        }
+
+        &_trans {
+            margin-bottom: 59px !important;
+        }
+
+        &_title {
+            margin-bottom: 32px;
+        }
+
+        &_transport {
+            margin-bottom: 8px !important;
+        }
+    }
+}
+
+.periods__name {
+    width: 100px;
+    margin-right: 93px;
+    font-weight: 500;
+
+    &_wide {
+        width: 173px;
+        margin-right: 42px;
+    }
+
+    &_title {
+        font-weight: 700;
+
+        &:first-child {
+            margin-right: 62px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 89px;
+        }
+
+        &:nth-child(3) {
+            margin-right: 12px;
+        }
+
+        &:nth-child(4) {
+            margin-right: 17px;
+        }
+    }
+
+    &_str {
+        font-weight: 700;
+
+        &:first-child {
+            margin-right: 115px;
+        }
+
+        &:nth-child(2) {
+            margin-right: 132px;
+        }
+
+        &:nth-child(3) {
+            margin-right: 132px;
+        }
+
+        &:nth-child(4) {
+            margin-right: 0;
+        }
+    }
+
+    &_transport {
+        margin-right: 93px !important;
+    }
+}
+
+.periods__date_dollar {
+    position: relative;
+   
+
+    &:before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 45px;
+        background: url('../img-min/dollar.png') no-repeat center;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        z-index: 1;
+    }
+}
+
+.periods__input_tab {
+    margin-right: 40px;
+}
+
+.economy {
+    position: relative;
+
+    &:before {
+        content: 'Эконом';
+        font-weight: 500;
+        position: absolute;
+        top: -28px;
+        left: 0;
+    }
+}
+
+.lux {
+    position: relative;
+
+    &:before {
+        content: 'Люкс';
+        font-weight: 500;
+        position: absolute;
+        top: -28px;
+        left: 0;
+    }
+}
+
+.month {
+    position: relative;
+
+    &:before {
+        content: 'М';
+        font-weight: 500;
+        position: absolute;
+        top: -28px;
+        left: 30px;
+    }
+}
+
+.day {
+    position: relative;
+
+    &:before {
+        content: 'Д';
+        font-weight: 500;
+        position: absolute;
+        top: -28px;
+        left: 30px;
+    }
+}
+
+.add-btn {
+    width: 173px;
+    height: 45px;
+    box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+    border-radius: 2px;
+    border: 1px solid #00aafe;
+    margin-right: 43px;
+    color: #00aafe;
+
+    & span {
+        margin-left: 5px;
+        font-size: 25px;
+        margin-top: 4px;
+    }
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox + label:before {
+    content: ">";
+    transform: rotateZ(90deg);
+    color: transparent;
+    display: inline-block;
+    border: 2px solid #00aafe;
+    font-size: 15px;    
+    line-height: 18px;
+    margin: 0 13px 0 0;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    border-radius: 2px;
+}
+
+input[type=checkbox]:checked + label:before {
+    border-color: #00aafe;
+    background-color: #fff;
+    color: #00aafe;
+    font-weight: 700;
+}
+
+.check {
+    padding-top: 24px;
+    color: #686868;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.before {
+    position: relative;
+
+    &:after {
+        content: 'К оплате';
+        font-weight: 500;
+        color: #686868;
+        font-size: 15px;
+        position: absolute;
+        top: -28px;
+        left: 0;
+    }
+}
+
+.after {
+    position: relative;
+
+    &:after {
+        content: 'Оплачено';
+        font-weight: 500;
+        color: #686868;
+        font-size: 15px;
+        position: absolute;
+        top: -28px;
+        left: 0;
+    }
+}
+
+.transport-btn {
+    margin-right: 18px;
+    width: 175px;
+    height: 45px;
+    border-radius: 2px;
+    border: 1px solid #00aafe;
+    color: #00aafe;
+    font-size: 15px;
+    font-weight: 500;
+
+    & svg {
+        margin-right: 15px;
+    }
+
+    & path {
+        fill: #00aafe;
+    }
+    
+    &_active {
+        box-shadow: 0 14px 25px rgba(110, 228, 215, 0.25);
+        background-color: #6ee4d7;
+        color: #ffffff;
+
+        & path {
+            fill: #fff;
+        }
+    }
+}
+
+.table-collective .periods__date_dollar:before{
+    right: 20px;
+}
+
+.table-collective .comment-input  {
+    width: 1148px;
+}
+
+.live {
+
+    & .row__btns {
+        display: flex;
+    }
+
+    & .info__btn {
+        width: 368px;
+        height: 49px;
+        box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-left: 22px;
+    }
+}
+
+.corpus {
+
+    & .periods_title {
+        margin-left: 0;
+    }
+
+    & .periods__name_title:first-child {
+        font-weight: 500;
+        margin-right: 93px;
+    }
+
+    & .periods__name_title:nth-child(2) {
+        margin-right: 190px;
+    }
+
+    & .periods__name_title:nth-child(3) {
+        margin-right: 95px;
+    }
+
+    & .periods__name_title:nth-child(4) {
+        margin-right: 145px;
+    }
+
+    & .periods__name_title:nth-child(5) {
+        margin-right: 115px;
+    }
+
+    & .periods__name_title:nth-child(6) {
+        margin-right: 0;
+    }
+
+    & .periods_title {
+        margin-bottom: 59px;
+    }
+
+    & .row__btns {
+        display: flex;
+    }
+
+    & .info__btn {
+        width: 242px;
+        height: 49px;
+        box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-left: 22px;
+    }
+}
+
+.passport .periods__input_big {
+    margin-bottom: 0;
+}
+
+.passport {
+
+    & .check {
+        padding-top: 0;
+    }
+
+    & .collective__btn {
+        margin-top: 40px;
+    }
+
+    & .row__btns {
+        display: flex;
+    }
+
+    & .info__btn {
+        width: 242px;
+        height: 49px;
+        box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 40px;
+        margin-left: 22px;
+    }
+}
+
+.services {
+
+    .forms__title {
+        color: #686868;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    & .textarea {
+        width: 271px;
+        height: 260px;
+        border-radius: 2px;
+        border: 1px solid #d7d7d7;
+        padding-bottom: 200px;
+    }
+}

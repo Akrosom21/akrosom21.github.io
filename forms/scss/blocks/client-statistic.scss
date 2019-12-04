@@ -1,0 +1,124 @@
+.client-statistic {
+
+    & .client-statistic__active {
+        width: 173px;
+        height: 49px;
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        background-color: rgba(0, 170, 254, 0.2);
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+        margin-right: 22px;
+    }
+
+    & .client-statistic__unactive {
+        width: 173px;
+        height: 49px;
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        background-color: #fff;
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    & .client-statistic__nonactive {
+        width: 174px;
+        height: 49px;
+        box-shadow: 0 14px 25px #6ee4d7;
+        border-radius: 2px;
+        background-color: #6ee4d7;
+        margin-left: 21px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    & .forms-radio+label {
+        padding: 0 15px 0 28px;
+    }
+
+    & .forms {
+
+        & .periods {
+            align-items: flex-start;
+        }
+
+        & .festivals_padding {
+            margin-right: 22px;
+        }
+    }
+
+    & .main__table {
+        margin-top: 40px;
+        margin-bottom: 28px;
+
+        & th {
+            border: none;
+            text-align: left;
+            padding-left: 19px;
+
+            &:first-child {
+                width: 195px;
+            }
+    
+            &:last-child {
+                width: 171px;
+            }
+    
+            &:nth-child(2) {
+                width: 90px;
+            }
+    
+            &:nth-child(3) {
+                width: 90px;
+            }
+
+            &:nth-child(4) {
+                width: 95px;
+            }
+
+            &:nth-child(5) {
+                width: 150px;
+            }
+
+            &:nth-child(6) {
+                width: 130px;
+            }
+
+            &:nth-child(7) {
+                width: 100px;
+            }
+
+            &:nth-child(8) {
+                width: 100px;
+            }
+
+            &:nth-child(9) {
+                width: 170px;
+            }
+        }
+        & td {
+            border: none;
+            text-align: left;
+        }
+    }
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+.m-top {
+    margin-top: 48px;
+}
+
+.m-bottom {
+    margin-bottom: 76px;
+}
+
+.t-center {
+    text-align: center !important;
+}

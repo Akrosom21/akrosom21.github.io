@@ -1,0 +1,45 @@
+.nav {
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #e2e6f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-item {
+            cursor: pointer;
+        }
+
+        &-item:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.active-svg {
+    
+    position: relative;
+    & path {
+        fill: #00aafe;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 24px;
+        background-color: #00aafe;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        z-index: 22;
+    }
+}

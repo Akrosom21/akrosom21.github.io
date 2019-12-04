@@ -1,0 +1,128 @@
+.individual {
+
+    & .periods__input_small {
+        margin-bottom: 30px;
+    }
+
+    & .periods__input_medium {
+        margin-bottom: 30px;
+    }
+
+    & .periods {
+        align-items: flex-start;
+    }
+
+    & .select__list {
+        position: absolute;
+        z-index: 1;
+    }
+
+    & .comment-input {
+        width: 857px;
+        margin-top: 10px;
+    }
+
+    & .padding {
+        margin-bottom: 20px;
+    }
+
+    & .periods__input_small {
+        margin-bottom: 0;
+    }
+
+    & .periods__input_medium {
+        margin-bottom: 0;
+    }
+}
+
+.row__btns {
+    display: flex;
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.age-btn {
+    width: 174px;
+    height: 49px;
+    box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+    border-radius: 2px;
+    border: 1px solid #00aafe;
+    color: #00aafe;
+    margin-right: 21px;
+
+    &_active {
+        background-color: rgba(0, 170, 254, 0.2);
+        color: #00aafe;
+    }
+}
+
+.sex {
+    display: flex;
+    margin-bottom: 30px;
+    margin-right: 19px;
+
+    &__type:first-child {
+        margin-right: 8px;
+    }
+}
+
+.festivals__inner_small {
+    margin-bottom: 30px;
+    margin-right: 19px;
+
+    & .select__list {
+        width: 76px;
+    }
+
+    & .select {
+        width: 76px;
+    }
+
+    & .select__gap:after {
+        width: 25px;
+        height: 44px;
+    }
+
+    & .select__gap:before {
+        top: 14px;
+        right: 6px;
+        width: 10px;
+        height: 10px;
+    }
+
+    & .select__item span:after {
+        display: none;
+    }
+}
+
+.festivals__inner_wide {
+    margin-right: 20px;
+
+    & .select {
+        width: 564px;
+    }
+
+    & .select__list {
+        width: 564px;
+    }
+
+    & .select__item span:after {
+        display: none;
+    }
+}
+
+.row__check {
+    display: flex;
+
+    & .check {
+        margin-right: 51px;
+    }
+}
+
+.individual__btn {
+    width: 174px !important;
+}
+
+.individual__row {
+    margin-top: 0 !important;
+}

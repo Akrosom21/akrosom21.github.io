@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #e2e6f2;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 22px;
+}
+
+.search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    &__input {
+        color: #bcbbbb;
+        font-size: 15px;
+        line-height: 24px;
+        border: 0;
+        width: 207px;
+        margin-right: 58px;
+        margin-left: 10px;
+        outline: none;
+
+        &::placeholder {
+            color: #bcbbbb;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+}
+
+.user {
+    height: 70px;
+    border-left: 1px solid #e2e6f2;
+    display: flex;
+    align-items: center;
+
+    &__photo {
+        width: 40px;
+        height: 40px;
+        margin-right: 34px;
+        margin-left: 30px;
+    }
+}
