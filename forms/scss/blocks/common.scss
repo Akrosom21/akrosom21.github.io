@@ -93,12 +93,15 @@ img {
 }
 
 .modals_active {
-	display: block;
-	position: fixed;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	z-index: 2222;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	height: 200vh;
 	background-color: rgba(0, 0, 0, 0.56);
 }
 

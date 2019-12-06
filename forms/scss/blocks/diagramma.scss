@@ -5,7 +5,7 @@
         height: 49px;
         border-radius: 2px;
         border: 1px solid #00aafe;
-        background-color: rgba(0, 170, 254, 0.2);
+        background-color: #fff;
         color: #00aafe;
         font-size: 15px;
         font-weight: 500;
@@ -21,6 +21,11 @@
         color: #00aafe;
         font-size: 15px;
         font-weight: 500;
+    }
+
+    .diagramma-btn-color {
+        background-color: rgba(0, 170, 254, 0.2);
+        color: #00aafe;
     }
 }
 

@@ -1,8 +1,3 @@
-.modals {
-    display: flex;
-    justify-content: center;
-}
-
 .corpus-modals__inner {
     width: 565px;
     height: 358px;
@@ -27,7 +22,7 @@
 .corpus-modals__text {
     font-weight: 700;
     margin-left: 54px;
-    margin-right: 55px;
+   // margin-right: 55px;
     margin-top: -20px;
 }
 
@@ -45,6 +40,15 @@
     margin-bottom: 20px;
 }
 
+.info-modals__text {
+    margin-right: 99px;
+    margin-left: 20px;  
+    color: #686868;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -58,4 +62,78 @@
     font-size: 15px;
     font-weight: 500;
     margin-right: 21px;
+}
+
+.festivals-modals__inner {
+    width: 565px;
+    height: 753px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin-top: 20vh;
+
+    & .m-top {
+        margin-top: 20px;
+    }
+
+    & .m-left {
+        margin-left: 40px;
+    }
+
+    & .m-right {
+        margin-right: 55px;
+    }
+
+    & .m-left-2 {
+        margin-left: 80px;
+    }
+
+    .check {
+        padding-top: 0;
+        padding-bottom: 20px;
+
+        & label {
+            margin-right: 24px;
+        }
+    }
+
+    .justify-start {
+        justify-content: start;
+    }
+}
+
+.date-input {
+    width: 128px;
+    margin-right: 0;
+
+    &:first-child {
+        margin-right: 15px;
+    }
+}
+
+.align-center {
+    align-items: center;
+}
+
+.info-modals {
+    & .wide {
+        width: 120px;
+    }
+
+    & .d-flex {
+        margin-bottom: 46px;
+    }
+
+    & .d-flex_m-bottom {
+        margin-bottom: 0;
+    }
+
+    & .corpus-modals__text {
+        margin-top: 0;
+    }
+
+    & .check {
+        margin-top: 15px;
+    }
+
+
 }

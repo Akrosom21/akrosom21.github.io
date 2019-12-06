@@ -75,12 +75,15 @@ img {
   display: none; }
 
 .modals_active {
-  display: block;
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2222;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  height: 200vh;
   background-color: rgba(0, 0, 0, 0.56); }
 
 table svg {
@@ -145,7 +148,9 @@ table svg {
   align-items: center;
   height: 70px;
   border-bottom: 1px solid #e2e6f2;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative;
+  z-index: 1; }
 
 .logo {
   margin-right: auto;
@@ -189,8 +194,7 @@ table svg {
   border-right: 1px solid #e2e6f2;
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: -1; }
+  justify-content: center; }
   .nav__inner {
     display: flex;
     flex-direction: column;
@@ -581,6 +585,9 @@ ul {
 
 .tabble-bg {
   background-color: rgba(0, 170, 254, 0.1); }
+
+.collective .periods__input_big {
+  margin-bottom: 0; }
 
 .collective .section__title {
   margin-bottom: 58px; }
@@ -1048,7 +1055,7 @@ input[type=checkbox]:checked + label:before {
   height: 49px;
   border-radius: 2px;
   border: 1px solid #00aafe;
-  background-color: rgba(0, 170, 254, 0.2);
+  background-color: #fff;
   color: #00aafe;
   font-size: 15px;
   font-weight: 500;
@@ -1063,6 +1070,10 @@ input[type=checkbox]:checked + label:before {
   color: #00aafe;
   font-size: 15px;
   font-weight: 500; }
+
+.diagramma .diagramma-btn-color {
+  background-color: rgba(0, 170, 254, 0.2);
+  color: #00aafe; }
 
 .diagramma__desc {
   color: #686868;
@@ -1698,10 +1709,6 @@ input[type=checkbox]:checked + label:before {
 .corpus__table {
   width: 661px; }
 
-.modals {
-  display: flex;
-  justify-content: center; }
-
 .corpus-modals__inner {
   width: 565px;
   height: 358px;
@@ -1722,7 +1729,6 @@ input[type=checkbox]:checked + label:before {
 .corpus-modals__text {
   font-weight: 700;
   margin-left: 54px;
-  margin-right: 55px;
   margin-top: -20px; }
 
 .justify-between {
@@ -1737,6 +1743,14 @@ input[type=checkbox]:checked + label:before {
   margin-right: 99px;
   margin-bottom: 20px; }
 
+.info-modals__text {
+  margin-right: 99px;
+  margin-left: 20px;
+  color: #686868;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left; }
+
 .justify-center {
   justify-content: center; }
 
@@ -1749,3 +1763,49 @@ input[type=checkbox]:checked + label:before {
   font-size: 15px;
   font-weight: 500;
   margin-right: 21px; }
+
+.festivals-modals__inner {
+  width: 565px;
+  height: 753px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-top: 20vh; }
+  .festivals-modals__inner .m-top {
+    margin-top: 20px; }
+  .festivals-modals__inner .m-left {
+    margin-left: 40px; }
+  .festivals-modals__inner .m-right {
+    margin-right: 55px; }
+  .festivals-modals__inner .m-left-2 {
+    margin-left: 80px; }
+  .festivals-modals__inner .check {
+    padding-top: 0;
+    padding-bottom: 20px; }
+    .festivals-modals__inner .check label {
+      margin-right: 24px; }
+  .festivals-modals__inner .justify-start {
+    justify-content: start; }
+
+.date-input {
+  width: 128px;
+  margin-right: 0; }
+  .date-input:first-child {
+    margin-right: 15px; }
+
+.align-center {
+  align-items: center; }
+
+.info-modals .wide {
+  width: 120px; }
+
+.info-modals .d-flex {
+  margin-bottom: 46px; }
+
+.info-modals .d-flex_m-bottom {
+  margin-bottom: 0; }
+
+.info-modals .corpus-modals__text {
+  margin-top: 0; }
+
+.info-modals .check {
+  margin-top: 15px; }

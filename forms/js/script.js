@@ -1,5 +1,7 @@
-// Select
-$('.select').each(function(){
+$(function(){
+
+    // Select form
+    $('.select').each(function(){
     // Variables
     var $this = $(this),
         selectOption = $this.find('option'),
@@ -59,5 +61,206 @@ $('.select').each(function(){
             selectList.slideUp(dur);
         }
     });		
-
 });
+
+//Nav toggle
+
+$('.nav__item-main').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#main').addClass('page_active');
+});
+$('.nav__item-collective').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#collective').addClass('page_active');
+});
+$('.nav__item-individual').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#individual').addClass('page_active');
+});
+$('.nav__item-statistic').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#statistic').addClass('page_active');
+});
+$('.nav__item-diagramma').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#diagramma').addClass('page_active');
+});
+$('.nav__item-festivals').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#festivals').addClass('page_active');
+});
+$('.nav__item-corpus').click(function(){
+    $('.page').removeClass('page_active');
+    $('.nav__inner-item').removeClass('active-svg');
+    $(this).addClass('active-svg');
+    $('#corpus').addClass('page_active');
+});
+
+$('.collective-tab').click(function(){
+    $('.collective-tab').removeClass('tab-active');
+    $(this).addClass('tab-active');
+});
+
+$('#data-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#data-tab-page').addClass('collective-active');
+    $('#crumbs').text('Данные коллектива');
+});
+
+$('#table-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#table-tab-page').addClass('collective-active');
+    $('#crumbs').text('Таблица коллектива');
+});
+
+$('#insurance-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#insurance-tab-page').addClass('collective-active');
+    $('#crumbs').text('Страхование коллектива');
+});
+
+$('#transfer-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#transfer-tab-page').addClass('collective-active');
+    $('#crumbs').text('Трансфер коллектива');
+});
+
+$('#calculate-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#calculate-tab-page').addClass('collective-active');
+    $('#crumbs').text('Таблица расчетов по коллективу');
+});
+
+$('#live-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#live-tab-page').addClass('collective-active');
+    $('#crumbs').text('Проживание в корпусе');
+});
+
+$('#suite-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#suite-tab-page').addClass('collective-active');
+    $('#crumbs').text('Размещение коллектива по корпусам');
+});
+
+$('#passport-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#passport-tab-page').addClass('collective-active');
+    $('#crumbs').text('Данные загранпаспортов');
+});
+
+$('#services-tab').click(function(){
+    $('.collective').removeClass('collective-active');
+    $('#services-tab-page').addClass('collective-active');
+    $('#crumbs').text('Дополнительные услуги');
+});
+
+$('.individual-tab').click(function(){
+    $('.individual-tab').removeClass('tab-active');
+    $(this).addClass('tab-active');
+});
+
+$('#individual-data').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-data-page').addClass('individual-active');
+    $('#crumbs-individual').text('Данные участника');
+});
+
+$('#individual-transfer').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-transfer-page').addClass('individual-active');
+    $('#crumbs-individual').text('Трансфер Участника');
+});
+
+$('#individual-live').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-live-page').addClass('individual-active');
+    $('#crumbs-individual').text('Проживание в корпусе');
+});
+
+$('#individual-passport').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-passport-page').addClass('individual-active');
+    $('#crumbs-individual').text('Данные загранпаспортов ');
+});
+
+$('#individual-services').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-services-page').addClass('individual-active');
+    $('#crumbs-individual').text('Дополнительные услуги');
+});
+
+$('#individual-pay').click(function(){
+    $('.individual').removeClass('individual-active');
+    $('#individual-pay-page').addClass('individual-active');
+    $('#crumbs-individual').text('Оплаты участника');
+});
+
+$('#diagramma-btn-table').click(function(){
+    $('.diagramma').removeClass('diagramma_active');
+    $('#diagramma-table').addClass('diagramma_active');
+});
+
+$('#diagramma-btn').click(function(){
+    $('.diagramma').removeClass('diagramma_active');
+    $('#diagramma-inner').addClass('diagramma_active');
+});
+
+// Modals
+
+$('#festivals-btn').click(function(){
+    $('.festivals-modals').addClass('modals_active');
+});
+
+$(document).mouseup(function (e){
+    var div = $(".festivals-modals__inner");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+            $(".festivals-modals").removeClass("modals_active");
+    }
+});
+
+$('.cancel').click(function(){
+    $(".festivals-modals").removeClass("modals_active");
+    $(".info-modals").removeClass("modals_active");
+    $(".corpus-modals").removeClass("modals_active");
+});
+
+$('.save').click(function(){
+    $(".festivals-modals").removeClass("modals_active");
+    $('.info-modals').addClass('modals_active');
+});
+
+$(document).mouseup(function (e){
+    var div = $(".festivals-modals__inner");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+            $(".info-modals").removeClass("modals_active");
+    }
+});
+
+$('#corpus-btn').click(function(){
+    $('.corpus-modals').addClass('modals_active');
+});
+
+$(document).mouseup(function (e){
+    var div = $(".corpus-modals__inner");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+            $(".corpus-modals").removeClass("modals_active");
+    }
+});
+    
+})
