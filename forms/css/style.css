@@ -758,27 +758,30 @@ ul {
 .checkbox {
   display: none; }
 
+label {
+  cursor: pointer; }
+
 .checkbox + label:before {
-  content: ">";
-  transform: rotateZ(90deg);
-  color: transparent;
+  cursor: pointer;
+  content: "";
   display: inline-block;
-  border: 2px solid #00aafe;
-  font-size: 15px;
-  line-height: 18px;
   margin: 0 13px 0 0;
-  height: 22px;
-  width: 22px;
-  text-align: center;
+  height: 20px;
+  width: 20px;
   vertical-align: middle;
-  transition: color ease .3s;
-  border-radius: 2px; }
+  background: url("../img-min/check-border.svg") no-repeat center;
+  background-size: cover; }
 
 input[type=checkbox]:checked + label:before {
-  border-color: #00aafe;
-  background-color: #fff;
-  color: #00aafe;
-  font-weight: 700; }
+  cursor: pointer;
+  content: "";
+  display: inline-block;
+  margin: 0 13px 0 0;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  background: url("../img-min/check-all.svg") no-repeat center;
+  background-size: cover; }
 
 .check {
   padding-top: 24px;
