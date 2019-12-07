@@ -31,6 +31,12 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&:hover {
+		background-color: rgba(0, 170, 254, 0.2);
+		border: 1px solid #00aafe;
+		color: #00aafe;
+	}
 }
 
 .d-none {
@@ -54,6 +60,10 @@ img {
 	color: #686868;
 	font-size: 24px;
 	font-weight: 500;
+}
+
+.d-fade {
+	display: none !important;
 }
 
 .page {

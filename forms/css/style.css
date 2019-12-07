@@ -28,6 +28,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .btn:hover {
+    background-color: rgba(0, 170, 254, 0.2);
+    border: 1px solid #00aafe;
+    color: #00aafe; }
 
 .d-none {
   opacity: 0 !important; }
@@ -46,6 +50,9 @@ img {
   color: #686868;
   font-size: 24px;
   font-weight: 500; }
+
+.d-fade {
+  display: none !important; }
 
 .page {
   display: none; }
@@ -200,11 +207,26 @@ table svg {
     flex-direction: column;
     align-items: center; }
     .nav__inner-item {
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative;
+      transition: all .2s linear; }
     .nav__inner-item:not(:last-child) {
       margin-bottom: 25px; }
 
+.nav__inner-item:before {
+  transition: all .2s linear;
+  content: '';
+  display: block;
+  width: 3px;
+  height: 0;
+  background-color: #00aafe;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  z-index: 22; }
+
 .active-svg {
+  transition: all .2s linear;
   position: relative; }
   .active-svg path {
     fill: #00aafe; }
@@ -218,6 +240,9 @@ table svg {
     top: 0;
     right: -30px;
     z-index: 22; }
+
+.nav__inner-item:hover path {
+  fill: #00aafe; }
 
 .intro {
   padding-top: 30px;
@@ -266,14 +291,25 @@ table svg {
     color: #000000; }
 
 .tab {
+  position: relative;
   display: inline-block;
   padding-bottom: 9px;
   color: #00aafe;
   font-size: 15px;
   font-weight: 500;
-  border-bottom: 4px solid #00aafe;
   margin-left: 65px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .2s linear; }
+  .tab:before {
+    transition: all .2s linear;
+    content: '';
+    display: block;
+    width: 0%;
+    height: 4px;
+    background-color: #00aafe;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
 
 .inner-nav {
   display: flex;
@@ -288,7 +324,18 @@ table svg {
 
 .tab-active {
   color: #00aafe !important;
-  border-bottom: 4px solid #00aafe !important; }
+  position: relative;
+  transition: all .2s linear; }
+  .tab-active:before {
+    transition: all .2s linear;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #00aafe;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
 
 .main .periods {
   align-items: flex-start; }
@@ -1809,3 +1856,171 @@ input[type=checkbox]:checked + label:before {
 
 .info-modals .check {
   margin-top: 15px; }
+
+.enter {
+  height: 965px;
+  background: #264261 url("../img-min/enter-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center; }
+  .enter__inner {
+    margin-top: 20vh;
+    width: 565px;
+    height: 576px;
+    box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .enter__title {
+    width: 260px;
+    color: #686868;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0; }
+  .enter__input {
+    width: 370px;
+    height: 45px;
+    border-radius: 2px;
+    border: 1px solid #d7d7d7;
+    padding-left: 20px;
+    font-weight: 500;
+    margin-bottom: 20px; }
+    .enter__input::placeholder {
+      color: #717171;
+      opacity: 0.5;
+      font-size: 16px;
+      font-weight: 500; }
+  .enter .check {
+    align-self: flex-start;
+    margin-left: 97px;
+    color: #686868;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 60px; }
+  .enter__btn {
+    width: 174px;
+    height: 49px;
+    box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+    border-radius: 2px;
+    background-color: #00aafe;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 60px; }
+
+.reg-page {
+  margin-right: 20px;
+  color: #00aafe;
+  font-weight: 500; }
+
+.forgot-page {
+  margin-right: 20px;
+  color: #00aafe;
+  font-weight: 500; }
+
+.input_password {
+  position: relative; }
+  .input_password:after {
+    content: '';
+    display: block;
+    width: 21px;
+    height: 12px;
+    background: url("../img-min/eye.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    right: 22px;
+    top: 16px;
+    z-index: 1;
+    cursor: pointer; }
+
+.reg {
+  height: 965px;
+  background: #264261 url("../img-min/enter-bg.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center; }
+  .reg__inner {
+    margin-top: 20vh;
+    width: 565px;
+    height: 603px;
+    box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .reg__title {
+    color: #686868;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0; }
+  .reg__form {
+    display: flex;
+    justify-content: space-between;
+    height: 306px; }
+  .reg__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+    color: #717171;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .reg__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .reg__input {
+    width: 272px;
+    height: 45px;
+    border-radius: 2px;
+    border: 1px solid #d7d7d7;
+    padding-left: 21px;
+    font-size: 16px;
+    font-weight: 500; }
+  .reg__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px; }
+  .reg__btn {
+    width: 174px;
+    height: 49px;
+    box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+    border-radius: 2px;
+    border: 1px solid #00aafe;
+    color: #00aafe;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 21px; }
+    .reg__btn_blue {
+      background-color: #00aafe;
+      color: #ffffff;
+      margin-right: 0; }
+
+.password-check {
+  position: relative; }
+  .password-check:after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 10px;
+    background: url("../img-min/password-check.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    z-index: 1; }
+
+.forgot__inner {
+  width: 565px;
+  height: 344px;
+  box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  background-color: #ffffff; }
+  .forgot__inner .reg__btns {
+    margin-bottom: 50px; }

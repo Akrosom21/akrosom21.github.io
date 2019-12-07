@@ -1,0 +1,211 @@
+.enter {
+    height: 965px;
+    background: #264261 url('../img-min/enter-bg.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    &__inner {
+        margin-top: 20vh;
+        width: 565px;
+        height: 576px;
+        box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+        border-radius: 2px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        width: 260px;
+        color: #686868;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    &__input {
+        width: 370px;
+        height: 45px;
+        border-radius: 2px;
+        border: 1px solid #d7d7d7;
+        padding-left: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        &::placeholder {
+            color: #717171;
+            opacity: 0.5;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .check {
+        align-self: flex-start;
+        margin-left: 97px;
+        color: #686868;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        width: 174px;
+        height: 49px;
+        box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+        border-radius: 2px;
+        background-color: #00aafe;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 60px;
+    }
+
+}
+
+.reg-page {
+    margin-right: 20px;
+    color: #00aafe;
+    font-weight: 500;
+}
+
+.forgot-page {
+    margin-right: 20px;
+    color: #00aafe;
+    font-weight: 500;
+}
+
+.input_password {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 21px;
+        height: 12px;
+        background: url('../img-min/eye.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        right: 22px;
+        top: 16px;
+        z-index: 1;
+        cursor: pointer;
+    }
+}
+
+.reg {
+    height: 965px;
+    background: #264261 url('../img-min/enter-bg.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    &__inner {
+        margin-top: 20vh;
+        width: 565px;
+        height: 603px;
+        box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+        border-radius: 2px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: #686868;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        height: 306px;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 40px;
+        color: #717171;
+        font-weight: 700;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__input {
+        width: 272px;
+        height: 45px;
+        border-radius: 2px;
+        border: 1px solid #d7d7d7;
+        padding-left: 21px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        margin-top: 65px;
+    }
+
+    &__btn {
+        width: 174px;
+        height: 49px;
+        box-shadow: 0 14px 25px rgba(0, 170, 254, 0.25);
+        border-radius: 2px;
+        border: 1px solid #00aafe;
+        color: #00aafe;
+        font-size: 15px;
+        font-weight: 500;
+        margin-right: 21px;
+
+        &_blue {
+            background-color: #00aafe;
+            color: #ffffff;
+            margin-right: 0;
+        }
+    }
+}
+
+.password-check {
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 10px;
+        background: url('../img-min/password-check.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 16px;
+        right: 30px;
+        z-index: 1;
+    }
+}
+
+.forgot__inner {
+    width: 565px;
+    height: 344px;
+    box-shadow: 0 2px 25px 15px rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
+    background-color: #ffffff;
+
+    .reg__btns {
+        margin-bottom: 50px;
+    }
+}

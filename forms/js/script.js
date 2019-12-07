@@ -262,5 +262,23 @@ $(document).mouseup(function (e){
             $(".corpus-modals").removeClass("modals_active");
     }
 });
+
+$('.transport-btn').click(function(){
+    $('.transport-btn').removeClass('transport-btn_active');
+    $(this).addClass('transport-btn_active');
+});
+
+$('#fade-input').click(function(){
+    $('#fade').addClass('d-fade');
+})
+
+$('#add-input').click(function(){
+    $('#fade').removeClass('d-fade');
+})
+
+$('.age-btn').click(function(){
+    $('.age-btn').removeClass('age-btn_active');
+    $(this).addClass('age-btn_active');
+})
     
 })
