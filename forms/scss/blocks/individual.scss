@@ -61,9 +61,21 @@
     margin-bottom: 30px;
     margin-right: 19px;
 
+    &__type {
+        cursor: pointer;
+    }
+
     &__type:first-child {
         margin-right: 8px;
     }
+
+    &__type:nth-child(2) {
+        margin-right: 8px;
+    }
+}
+
+.sex__active {
+    
 }
 
 .festivals__inner_small {

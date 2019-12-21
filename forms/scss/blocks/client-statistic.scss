@@ -122,3 +122,24 @@
 .t-center {
     text-align: center !important;
 }
+
+.add-left {
+    margin-left: 280px;
+}
+
+.concat {
+    width: 1110px;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        margin-left: 3px;
+        margin-right: 3px;
+        text-decoration: none;
+
+        &-active {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    }
+}

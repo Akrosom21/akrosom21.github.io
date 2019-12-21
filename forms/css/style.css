@@ -29,12 +29,18 @@ img {
   justify-content: center;
   align-items: center; }
   .btn:hover {
-    background-color: rgba(0, 170, 254, 0.2);
-    border: 1px solid #00aafe;
-    color: #00aafe; }
+    background-color: rgba(0, 170, 254, 0.2) !important;
+    border: 1px solid #00aafe !important;
+    color: #00aafe !important; }
+
+.z-index {
+  z-index: 1211 !important; }
 
 .d-none {
-  opacity: 0 !important; }
+  display: none !important; }
+
+.none {
+  display: none !important; }
 
 .fw-500 {
   font-weight: 500 !important; }
@@ -136,12 +142,6 @@ table svg {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #d7d7d7; }
 
-::-webkit-resizer {
-  background-image: url("");
-  background-repeat: no-repeat;
-  width: 4px;
-  height: 0px; }
-
 ::-webkit-scrollbar {
   width: 2px;
   padding-right: 10px; }
@@ -159,9 +159,14 @@ table svg {
   position: relative;
   z-index: 1; }
 
+.textarea {
+  padding-top: 14px;
+  min-height: 45px !important; }
+
 .logo {
   margin-right: auto;
-  margin-left: 22px; }
+  margin-left: 22px;
+  height: 60px; }
 
 .search {
   margin-left: auto;
@@ -185,12 +190,19 @@ table svg {
   height: 70px;
   border-left: 1px solid #e2e6f2;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center; }
   .user__photo {
     width: 40px;
     height: 40px;
     margin-right: 34px;
-    margin-left: 30px; }
+    margin-left: 30px;
+    margin-bottom: 5px; }
+  .user__exit {
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid #946eb6; }
 
 .nav {
   width: 80px;
@@ -252,7 +264,7 @@ table svg {
 
 .intro__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 41px; }
   .intro__inner .crumbs {
@@ -316,11 +328,16 @@ table svg {
   align-items: center;
   margin-left: 65px; }
   .inner-nav .tab {
+    white-space: nowrap;
     margin-left: 0;
     border: none;
     color: #686868; }
     .inner-nav .tab:not(:last-child) {
       margin-right: 31px; }
+  .inner-nav img {
+    display: inline !important;
+    margin-left: 4px;
+    margin-bottom: -2px; }
 
 .tab-active {
   color: #00aafe !important;
@@ -633,6 +650,10 @@ ul {
 .tabble-bg {
   background-color: rgba(0, 170, 254, 0.1); }
 
+.select-absolute {
+  position: absolute !important;
+  top: 24px; }
+
 .collective .periods__input_big {
   margin-bottom: 0; }
 
@@ -682,26 +703,61 @@ ul {
     .periods__name_str:first-child {
       margin-right: 115px; }
     .periods__name_str:nth-child(2) {
-      margin-right: 132px; }
+      margin-right: 95px; }
     .periods__name_str:nth-child(3) {
-      margin-right: 132px; }
+      margin-right: 95px; }
     .periods__name_str:nth-child(4) {
-      margin-right: 0; }
+      margin-right: 90px; }
   .periods__name_transport {
     margin-right: 93px !important; }
 
 .periods__date_dollar {
   position: relative; }
-  .periods__date_dollar:before {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 45px;
-    background: url("../img-min/dollar.png") no-repeat center;
-    position: absolute;
-    top: 0;
-    right: 40px;
-    z-index: 1; }
+
+.dollar-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  width: 25px;
+  height: 45px;
+  background-color: #00aafe;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  z-index: 1; }
+
+.dollar-select {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 9999;
+  height: 86px;
+  box-shadow: 0 1px 30px 5px rgba(0, 0, 0, 0.11);
+  border-radius: 2px;
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 11px; }
+  .dollar-select .val {
+    cursor: pointer;
+    width: 77px;
+    height: 27px;
+    color: #686868;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px; }
+    .dollar-select .val span {
+      font-size: 10px; }
+    .dollar-select .val:hover {
+      background-color: #f8f8f8;
+      color: #00aafe; }
 
 .periods__input_tab {
   margin-right: 40px; }
@@ -742,6 +798,15 @@ ul {
     top: -28px;
     left: 30px; }
 
+.day-j {
+  position: relative; }
+  .day-j:before {
+    content: 'Ж';
+    font-weight: 500;
+    position: absolute;
+    top: -28px;
+    left: 30px; }
+
 .add-btn {
   width: 173px;
   height: 45px;
@@ -752,8 +817,7 @@ ul {
   color: #00aafe; }
   .add-btn span {
     margin-left: 5px;
-    font-size: 25px;
-    margin-top: 4px; }
+    font-size: 25px; }
 
 .checkbox {
   display: none; }
@@ -831,7 +895,7 @@ input[type=checkbox]:checked + label:before {
     .transport-btn_active path {
       fill: #fff; }
 
-.table-collective .periods__date_dollar:before {
+.table-collective .dollar-btn {
   right: 20px; }
 
 .table-collective .comment-input {
@@ -857,22 +921,19 @@ input[type=checkbox]:checked + label:before {
 
 .corpus .periods__name_title:first-child {
   font-weight: 500;
-  margin-right: 93px; }
+  margin-right: 129px; }
 
 .corpus .periods__name_title:nth-child(2) {
-  margin-right: 190px; }
+  margin-right: 160px; }
 
 .corpus .periods__name_title:nth-child(3) {
-  margin-right: 95px; }
-
-.corpus .periods__name_title:nth-child(4) {
-  margin-right: 145px; }
-
-.corpus .periods__name_title:nth-child(5) {
   margin-right: 115px; }
 
-.corpus .periods__name_title:nth-child(6) {
-  margin-right: 0; }
+.corpus .periods__name_title:nth-child(4) {
+  margin-right: 110px; }
+
+.corpus .periods__name_title:nth-child(5) {
+  margin-right: 85px; }
 
 .corpus .periods_title {
   margin-bottom: 59px; }
@@ -928,6 +989,30 @@ input[type=checkbox]:checked + label:before {
   border: 1px solid #d7d7d7;
   padding-bottom: 200px; }
 
+.min-input .periods__input_tab {
+  margin-right: 20px; }
+
+.min-input .max-width {
+  max-width: 1100px; }
+
+.width-1160 {
+  width: 1160px; }
+
+.neg-top {
+  margin-top: -42px; }
+
+.periods__date {
+  position: relative; }
+
+.error-input {
+  color: #f25580;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.04px;
+  position: absolute;
+  bottom: -20px;
+  z-index: 222; }
+
 .individual .periods__input_small {
   margin-bottom: 30px; }
 
@@ -975,7 +1060,11 @@ input[type=checkbox]:checked + label:before {
   display: flex;
   margin-bottom: 30px;
   margin-right: 19px; }
+  .sex__type {
+    cursor: pointer; }
   .sex__type:first-child {
+    margin-right: 8px; }
+  .sex__type:nth-child(2) {
     margin-right: 8px; }
 
 .festivals__inner_small {
@@ -1099,6 +1188,21 @@ input[type=checkbox]:checked + label:before {
 
 .t-center {
   text-align: center !important; }
+
+.add-left {
+  margin-left: 280px; }
+
+.concat {
+  width: 1110px;
+  display: flex;
+  justify-content: center; }
+  .concat__item {
+    margin-left: 3px;
+    margin-right: 3px;
+    text-decoration: none; }
+    .concat__item-active {
+      text-decoration: underline;
+      font-weight: 700; }
 
 .diagramma .client-statistic__active {
   width: 173px;
@@ -1859,6 +1963,10 @@ input[type=checkbox]:checked + label:before {
 
 .info-modals .check {
   margin-top: 15px; }
+
+.remove-mod {
+  height: 250px;
+  margin-top: 50vh; }
 
 .enter {
   height: 965px;

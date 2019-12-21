@@ -33,14 +33,22 @@ img {
 	align-items: center;
 
 	&:hover {
-		background-color: rgba(0, 170, 254, 0.2);
-		border: 1px solid #00aafe;
-		color: #00aafe;
+		background-color: rgba(0, 170, 254, 0.2) !important;
+		border: 1px solid #00aafe !important;
+		color: #00aafe !important;
 	}
 }
 
+.z-index {
+	z-index: 1211 !important;
+}
+
 .d-none {
-	opacity: 0 !important;
+	display: none !important;
+}
+
+.none {
+	display: none !important;
 }
 
 .fw-500 {
@@ -165,12 +173,12 @@ table svg {
 	background-color:#d7d7d7;
 	}
 	
-	::-webkit-resizer{
-	background-image:url('');
-	background-repeat:no-repeat;
-	width:4px;
-	height:0px
-	}
+	// ::-webkit-resizer{
+	// background-image:url('');
+	// background-repeat:no-repeat;
+	// width:4px;
+	// height:0px
+	// }
 	
 	::-webkit-scrollbar{
 	width: 2px;

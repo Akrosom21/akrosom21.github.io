@@ -81,15 +81,15 @@
         }
 
         &:nth-child(2) {
-            margin-right: 132px;
+            margin-right: 95px;
         }
 
         &:nth-child(3) {
-            margin-right: 132px;
+            margin-right: 95px;
         }
 
         &:nth-child(4) {
-            margin-right: 0;
+            margin-right: 90px;
         }
     }
 
@@ -100,18 +100,72 @@
 
 .periods__date_dollar {
     position: relative;
+    
    
 
-    &:before {
-        content: '';
-        display: block;
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     width: 25px;
+    //     height: 45px;
+    //     background: url('../img-min/dollar.png') no-repeat center;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 40px;
+    //     z-index: 1;
+    // }
+}
+
+.dollar-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
         width: 25px;
         height: 45px;
-        background: url('../img-min/dollar.png') no-repeat center;
+        background-color: #00aafe;
         position: absolute;
         top: 0;
         right: 40px;
         z-index: 1;
+}
+
+.dollar-select {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 9999;
+    height: 86px;
+    box-shadow: 0 1px 30px 5px rgba(0, 0, 0, 0.11);
+    border-radius: 2px;
+    background-color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 11px;
+
+    & .val {
+        cursor: pointer;
+        width: 77px;
+        height: 27px;
+        color: #686868;
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        & span {
+            font-size: 10px;
+        }
+
+        &:hover {
+            background-color: #f8f8f8;
+            color: #00aafe;
+        }
     }
 }
 
@@ -167,6 +221,18 @@
     }
 }
 
+.day-j {
+    position: relative;
+
+    &:before {
+        content: 'Ж';
+        font-weight: 500;
+        position: absolute;
+        top: -28px;
+        left: 30px;
+    }
+}
+
 .add-btn {
     width: 173px;
     height: 45px;
@@ -179,7 +245,6 @@
     & span {
         margin-left: 5px;
         font-size: 25px;
-        margin-top: 4px;
     }
 }
 
@@ -306,9 +371,13 @@ label {
     }
 }
 
-.table-collective .periods__date_dollar:before{
+// .table-collective .periods__date_dollar:before{
+//     right: 20px;
+// }
+.table-collective .dollar-btn {
     right: 20px;
 }
+//dollar-select
 
 .table-collective .comment-input  {
     width: 1148px;
@@ -342,28 +411,25 @@ label {
 
     & .periods__name_title:first-child {
         font-weight: 500;
-        margin-right: 93px;
+        margin-right: 129px;
     }
 
     & .periods__name_title:nth-child(2) {
-        margin-right: 190px;
+        margin-right: 160px;
     }
 
     & .periods__name_title:nth-child(3) {
-        margin-right: 95px;
-    }
-
-    & .periods__name_title:nth-child(4) {
-        margin-right: 145px;
-    }
-
-    & .periods__name_title:nth-child(5) {
         margin-right: 115px;
     }
 
-    & .periods__name_title:nth-child(6) {
-        margin-right: 0;
+    & .periods__name_title:nth-child(4) {
+        margin-right: 110px;
     }
+
+    & .periods__name_title:nth-child(5) {
+        margin-right: 85px;
+    }
+
 
     & .periods_title {
         margin-bottom: 59px;
@@ -434,4 +500,36 @@ label {
         border: 1px solid #d7d7d7;
         padding-bottom: 200px;
     }
+}
+
+.min-input {
+    .periods__input_tab {
+        margin-right: 20px;
+    }
+
+    .max-width {
+        max-width: 1100px;
+    }
+}
+
+.width-1160 {
+    width: 1160px;
+}
+
+.neg-top {
+    margin-top: -42px;
+}
+
+.periods__date {
+    position: relative;
+}
+
+.error-input {
+    color: #f25580;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    position: absolute;
+    bottom: -20px;
+    z-index: 222;
 }

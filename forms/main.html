@@ -14,13 +14,14 @@
         <div class="container">
             <!-- Header -->
             <header class="header">
-                <img src="img-min/logo.svg" alt="logo" class="logo">
+                <img src="img-min/logo.png" alt="logo" class="logo">
                 <div class="search">
                     <img src="img-min/search-img.svg" alt="search" class="search__img">
                     <input type="text" placeholder="Введите что-то для поиска…" class="search__input">
                 </div>
                 <div class="user">
                     <img src="img-min/user-photo.jpg" alt="user" class="user__photo">
+                    <a href="/index.html" class="user__exit">Выход</a>
                 </div>
             </header>
             <!-- /.header -->
@@ -242,34 +243,36 @@
                     <div class="forms">
                         <div class="periods">
                             <div class="radio">
-                                <input type="radio" class="forms-radio" id="periods__radio">
+                                <input type="radio" class="forms-radio" name="main" id="periods__radio">
                                 <label for="periods__radio"></label>
                             </div>
                             <div class="periods__date">
                                 <div class="forms__title">Период от</div>
-                                <input type="text" class="periods__input" placeholder="ДД.ММ.ГГ">
+                                <input type="text" class="periods__input date-mask" placeholder="ДД.ММ.ГГ">
                                 <a href="#" class="periods__btn btn active-btn">Выбрать</a>
                             </div>
                             <div class="periods__date">
                                 <div class="forms__title">Период до</div>
-                                <input type="text" class="periods__input" placeholder="ДД.ММ.ГГ">
+                                <input type="text" class="periods__input date-mask" placeholder="ДД.ММ.ГГ">
                             </div>
                         </div>
                         <div class="festivals">
                             <div class="radio">
-                                <input type="radio" class="forms-radio" id="festivals__radio">
+                                <input type="radio" name="main" class="forms-radio" id="festivals__radio">
                                 <label for="festivals__radio"></label>
                             </div>
                             <div class="festivals__inner">
                                 <div class="forms__title">Фестивали</div>
-                                <select name="select-box" id="selectId" class="select">
+                                <div class="select-absolute">
+                                    <select name="select-box" id="selectId" class="select">
                                     <option value="item-1" name="value">Звездный Бриз</option>
                                     <option value="item-2" name="value">Арт Волна</option>
                                     <option value="item-1" name="value">Китен Арт Тайм</option>
                                     <option value="item-2" name="value">Арт Волна</option>
                                 </select>
+                                </div>
+                                
                                 <div class="festivals__btns">
-                                    <a href="#" class="periods__btn btn active-btn">Выбрать</a>
                                     <a href="#" class="periods__btn btn unactive-btn">Экспорт</a>
                                 </div>
                             </div>
@@ -319,16 +322,14 @@
                 <!-- Intro -->
                 <div class="intro">
                     <div class="intro__inner">
-                        <div class="intro__inner-nav"><img class="arrow-back" src="img-min/back-arrow.svg" alt="icon">Назад</div>
                         <div class="crumbs">
                             <div class="crumbs__before">Главная / Участники коллектива / </div>
                             <div class="crumbs__current" id="crumbs">Данные коллектива</div>
                         </div>
-                        <div class="intro__inner-nav">Вперед<img class="arrow-next" src="img-min/next-arrow.svg" alt="icon"></div>
                     </div>
                     <div class="inner-nav">
-                        <div class="tab tab-active collective-tab" id="data-tab">Данные</div>
-                        <div class="tab collective-tab" id="table-tab">Таблица</div>
+                        <div class="tab tab-active collective-tab" id="data-tab">Данные<img src="img-min/ok.jpg" alt="icon"></div>
+                        <div class="tab collective-tab" id="table-tab">Таблица<img src="img-min/error.jpg" alt="icon"></div>
                         <div class="tab collective-tab" id="insurance-tab">Страхование</div>
                         <div class="tab collective-tab" id="transfer-tab">Трансфер</div>
                         <div class="tab collective-tab" id="calculate-tab">Таблица расчетов</div>
@@ -346,6 +347,7 @@
                         <div class="periods__date">
                             <div class="forms__title">Название коллектива</div>
                             <input type="text" class="periods__input periods__input_big">
+                            <div class="error-input">! Ошибка: Введены некорректные данные</div>
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Город проживания</div>
@@ -353,11 +355,11 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата заезда</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата выезда</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Кол-во</div>
@@ -375,11 +377,11 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Телефон основной</div>
-                            <input type="text" class="periods__input periods__input_big">
+                            <input type="text" class="periods__input periods__input_big tel-mask">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Телефон дополнительный</div>
-                            <input type="text" class="periods__input periods__input_big">
+                            <input type="text" class="periods__input periods__input_big tel-mask">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Email</div>
@@ -387,14 +389,17 @@
                         </div>
                     </div>
                     <div class="periods">
-                        <div class="festivals__inner">
+                        <div class="festivals__inner neg-top">
                             <div class="forms__title">Фестивали</div>
-                            <select name="select-box" id="selectId-1" class="select">
-                                <option value="item-1" name="value">Звездный Бриз</option>
-                                <option value="item-2" name="value">Арт Волна</option>
-                                <option value="item-1" name="value">Китен Арт Тайм</option>
-                                <option value="item-2" name="value">Арт Волна</option>
-                            </select>
+                            <div class="select-absolute">
+                                    <select name="select-box" id="selectId-1" class="select">
+                                            <option value="item-1" name="value">Звездный Бриз</option>
+                                            <option value="item-2" name="value">Арт Волна</option>
+                                            <option value="item-1" name="value">Китен Арт Тайм</option>
+                                            <option value="item-2" name="value">Арт Волна</option>
+                                        </select>
+                            </div>
+
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Сертификат</div>
@@ -445,21 +450,57 @@
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-1">$</div>
+                            <div class="dollar-select dollar-select-1 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-2">$</div>
+                            <div class="dollar-select dollar-select-2 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-3">$</div>
+                            <div class="dollar-select dollar-select-3 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-4">$</div>
+                            <div class="dollar-select dollar-select-4 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-5">$</div>
+                            <div class="dollar-select dollar-select-5 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-6">$</div>
+                            <div class="dollar-select dollar-select-6 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -468,24 +509,60 @@
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-7">$</div>
+                            <div class="dollar-select dollar-select-7 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-8">$</div>
+                            <div class="dollar-select dollar-select-8 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-9">$</div>
+                            <div class="dollar-select dollar-select-9 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-10">$</div>
+                            <div class="dollar-select dollar-select-10 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-11">$</div>
+                            <div class="dollar-select dollar-select-11 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-12">$</div>
+                            <div class="dollar-select dollar-select-12 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
-                    <input type="text" class="comment-input periods__input periods__input_large" placeholder="Коментарии">
+                    <textarea class="comment-input periods__input periods__input_large textarea" placeholder="Коментарии"></textarea>
                     <div class="collective__btn btn active-btn">Сохранить</div>
                 </div>
                 <div class="collective section" id="insurance-tab-page">
@@ -498,25 +575,62 @@
                     </div>
                     <div class="periods">
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_medium periods__input_tab" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium periods__input_tab date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
+
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-13">$</div>
+                            <div class="dollar-select dollar-select-13 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-14">$</div>
+                            <div class="dollar-select dollar-select-14 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-15">$</div>
+                            <div class="dollar-select dollar-select-15 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-16">$</div>
+                            <div class="dollar-select dollar-select-16 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-17">$</div>
+                            <div class="dollar-select dollar-select-17 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-18">$</div>
+                            <div class="dollar-select dollar-select-18 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -525,21 +639,57 @@
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btndollar-btn-19">$</div>
+                            <div class="dollar-select dollar-select-19 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-20">$</div>
+                            <div class="dollar-select dollar-select-20 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-21">$</div>
+                            <div class="dollar-selectdollar-select-21 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-22">$</div>
+                            <div class="dollar-select dollar-select-22 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-23">$</div>
+                            <div class="dollar-select dollar-select-23 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-24">$</div>
+                            <div class="dollar-select dollar-select-24 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -548,24 +698,60 @@
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-25">$</div>
+                            <div class="dollar-select dollar-select-25 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-26">$</div>
+                            <div class="dollar-select dollar-select-26 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-80">$</div>
+                            <div class="dollar-select dollar-select-80 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-27">$</div>
+                            <div class="dollar-select dollar-select-27 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-28">$</div>
+                            <div class="dollar-select dollar-select-28 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-29">$</div>
+                            <div class="dollar-select dollar-select-29 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
-                    <input type="text" class="comment-input periods__input periods__input_large" placeholder="Коментарии">
+                    <textarea class="comment-input periods__input periods__input_large textarea" placeholder="Коментарии"></textarea>
                     <div class="check">
                         <input type="checkbox" class="checkbox" id="checkbox">
                         <label for="checkbox">Страховка оплачена полностью</label>
@@ -602,7 +788,7 @@
                             <input type="text" class="periods__input periods__input_small" placeholder="23">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -653,7 +839,7 @@
                             <input type="text" class="periods__input periods__input_small" placeholder="23">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -684,7 +870,7 @@
                             <input type="text" class="periods__input periods__input_small" placeholder="23">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -740,7 +926,7 @@
                             <input type="text" class="periods__input periods__input_small" placeholder="23">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -783,7 +969,7 @@
                             <input type="text" class="periods__input periods__input_small" placeholder="23">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -798,7 +984,7 @@
                                 <input type="text" class="periods__input periods__input_small" placeholder="23">
                             </div>
                             <div class="periods__date">
-                                <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                    <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                             </div>
                         </div>
                         <div class="periods">
@@ -813,7 +999,7 @@
                                     <input type="text" class="periods__input periods__input_small" placeholder="23">
                                 </div>
                                 <div class="periods__date">
-                                    <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                        <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                                 </div>
                             </div>
                     <div class="check">
@@ -827,45 +1013,107 @@
                 </div>
                 <div class="collective section table-collective" id="calculate-tab-page">
                     <h1 class="section__title">Таблица расчетов по коллективу</h1>
-                    <div class="periods periods_title periods_trans periods_str">
+                    <div class="periods periods_title periods_trans periods_str width-1160">
                         <div class="periods__name periods__name_title periods__name_str fw-500">Дата</div>
-                        <div class="periods__name periods__name_title periods__name_str">Взрослые</div>
-                        <div class="periods__name periods__name_title periods__name_str no-wrap">Возраст 60+</div>
-                        <div class="periods__name periods__name_title periods__name_str no-wrap">детская до 6 лет</div>
+                        <div class="periods__name periods__name_title periods__name_str">Участники</div>
+                        <div class="periods__name periods__name_title periods__name_str no-wrap">Взрослые</div>
+                        <div class="periods__name periods__name_title periods__name_str no-wrap">Участники</div>
+                        <div class="periods__name periods__name_title periods__name_str no-wrap">Дети до 5 лет</div>
+                        <div class="periods__name periods__name_title periods__name_str no-wrap">Лыготники</div>
                     </div>
                     <div class="periods">
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_medium periods__input_tab" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium periods__input_tab date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-30">$</div>
+                            <div class="dollar-select dollar-select-30 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-31">$</div>
+                            <div class="dollar-select dollar-select-31 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-32">$</div>
+                            <div class="dollar-select dollar-select-32 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-33">$</div>
+                            <div class="dollar-select dollar-select-33 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-34">$</div>
+                            <div class="dollar-select dollar-select-34 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-35">$</div>
+                            <div class="dollar-select dollar-select-35 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-36">$</div>
+                            <div class="dollar-select dollar-select-36 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-37">$</div>
+                            <div class="dollar-select dollar-select-37 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-38">$</div>
+                            <div class="dollar-select dollar-select-38 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-39">$</div>
+                            <div class="dollar-select dollar-select-39 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -874,33 +1122,93 @@
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-40">$</div>
+                            <div class="dollar-select dollar-select-40 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-41">$</div>
+                            <div class="dollar-select dollar-select-41 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-42">$</div>
+                            <div class="dollar-select dollar-select-42 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-43">$</div>
+                            <div class="dollar-select dollar-select-43 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-44">$</div>
+                            <div class="dollar-select dollar-select-44 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-45">$</div>
+                            <div class="dollar-select dollar-select-45 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-46">$</div>
+                            <div class="dollar-select dollar-select-46 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-47">$</div>
+                            <div class="dollar-select dollar-select-47 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-48">$</div>
+                            <div class="dollar-select dollar-select-48 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-49">$</div>
+                            <div class="dollar-select dollar-select-49 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -909,36 +1217,96 @@
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-50">$</div>
+                            <div class="dollar-select dollar-select-50 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-51">$</div>
+                            <div class="dollar-select dollar-select-51 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-52">$</div>
+                            <div class="dollar-select dollar-select-52 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-53">$</div>
+                            <div class="dollar-select dollar-select-53 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-54">$</div>
+                            <div class="dollar-select dollar-select-54 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-55">$</div>
+                            <div class="dollar-select dollar-select-55 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-56">$</div>
+                            <div class="dollar-select dollar-select-56 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-57">$</div>
+                            <div class="dollar-select dollar-select-57 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-58">$</div>
+                            <div class="dollar-select dollar-select-58 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small ">
+                            <div class="dollar-btn dollar-btn-59">$</div>
+                            <div class="dollar-select dollar-select-59 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
-                    <input type="text" class="comment-input periods__input periods__input_large" placeholder="Коментарии">
+                    <textarea class="comment-input periods__input periods__input_large textarea" placeholder="Коментарии"></textarea>
                     <div class="check">
                         <input type="checkbox" class="checkbox" id="checkbox-1">
                         <label for="checkbox-1">Тур оплачен полностью</label>
@@ -975,7 +1343,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Киев">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1002,7 +1370,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Киев">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1036,7 +1404,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Киев">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1073,7 +1441,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Киев">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1123,7 +1491,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Киев">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="check">
@@ -1132,9 +1500,9 @@
                     </div>
                     <div class="collective__btn btn active-btn">Сохранить</div>
                 </div>
-                <div class="collective section corpus" id="suite-tab-page">
+                <div class="collective section corpus min-input" id="suite-tab-page">
                     <h1 class="section__title">Размещение коллектива по корпусам</h1>
-                    <div class="periods periods_title">
+                    <div class="periods periods_title max-width">
                         <div class="periods__name periods__name_title">Корпус</div>
                         <div class="periods__name periods__name_title no-wrap">Общее количество</div>
                         <div class="periods__name periods__name_title">Дети</div>
@@ -1164,13 +1532,13 @@
                         <div class="periods__date month">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
                         </div>
-                        <div class="periods__date day">
+                        <div class="periods__date day-j">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
                         </div>
                         <div class="periods__date month">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
                         </div>
-                        <div class="periods__date day">
+                        <div class="periods__date day-j">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
                         </div>
                     </div>
@@ -1270,6 +1638,70 @@
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
                         </div>
                     </div>
+                    <div class="periods">
+                            <div class="periods__date">
+                                <div class="periods__name">Кипарисный</div>
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_medium periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                            <div class="periods__date">
+                                <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            </div>
+                        </div>
+                        <div class="periods">
+                                <div class="periods__date">
+                                    <div class="periods__name">Лазурный</div>
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_medium periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                                <div class="periods__date">
+                                    <input type="text" class="periods__input periods__input_small periods__input_tab">
+                                </div>
+                            </div>
                     <div class="row__btns">
                         <div class="collective__btn btn active-btn">Сохранить</div>
                         <div class="info__btn btn">Распечатать таблицу</div>
@@ -1288,7 +1720,7 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата Рождения</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Серия/номер</div>
@@ -1296,7 +1728,7 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Действителен</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                     </div>
                     <div class="periods">
@@ -1341,12 +1773,10 @@
                 <!-- Intro -->
                 <div class="intro">
                     <div class="intro__inner">
-                        <div class="intro__inner-nav"><img class="arrow-back" src="img-min/back-arrow.svg" alt="icon">Назад</div>
                         <div class="crumbs">
-                            <div class="crumbs__before">Главная / Участники коллектива / </div>
+                            <div class="crumbs__before">Главная / Карточка индивидуала / </div>
                             <div class="crumbs__current" id="crumbs-individual">Данные участника</div>
                         </div>
-                        <div class="intro__inner-nav">Вперед<img class="arrow-next" src="img-min/next-arrow.svg" alt="icon"></div>
                     </div>
                     <div class="inner-nav">
                         <div class="tab tab-active individual-tab" id="individual-data">Данные</div>
@@ -1373,7 +1803,7 @@
                         <div class="periods__date">
                             <div class="forms__title">Пол</div>
                             <div class="sex">
-                                <div class="sex__type">
+                                <div class="sex__type man-active">
                                     <?xml version="1.0" encoding="UTF-8"?>
                                     <svg id="SVGDoc" width="34" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 34 45">
                                         <defs></defs>
@@ -1400,7 +1830,26 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div class="sex__type">
+                                <div class="sex__type man-nonactive none">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="34px" height="45px" viewBox="0 0 34 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+                                            <title>Group 5 Copy</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Artboard" transform="translate(-18.000000, -74.000000)">
+                                                    <g id="Group-5-Copy" transform="translate(18.000000, 74.000000)">
+                                                        <rect id="Rectangle-Copy-11" stroke="#00AAFE" x="0.5" y="0.5" width="33" height="44" rx="2"></rect>
+                                                        <g id="Group" transform="translate(12.000000, 7.000000)" fill="#00AAFE" fill-rule="nonzero">
+                                                            <path d="M5.37764321,0 C3.51394708,-0.00136464908 2.00187876,1.52136052 2,3.40144841 C1.99936049,4.30532829 2.3550138,5.17237265 2.98858459,5.81150877 C3.62215538,6.45064489 4.48164414,6.8094165 5.37764321,6.80876111 C7.24132011,6.80686044 8.75075678,5.28151785 8.74942523,3.40144841 C8.74754921,1.52366871 7.2390508,0.00189789865 5.37764321,0 Z" id="Path"></path>
+                                                            <path d="M2.2827971,8 C1.02460671,8 0,9.02768659 0,10.2969968 L0,21.2415449 L2.707927,21.2415449 L2.707927,29.9537388 L7.78599283,29.9537388 L7.78599283,21.2415449 L10.4881067,21.2415449 L10.4881067,10.2969968 L10.4939199,10.2969968 C10.4939199,9.02768659 9.47512629,8 8.21688785,8 L2.2827971,8 L2.2827971,8 Z" id="Path"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                </div>
+                                <div class="sex__type woman-active">
                                     <?xml version="1.0" encoding="UTF-8"?>
                                     <svg id="SVGDoc" width="34" height="45" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 34 45">
                                         <defs>
@@ -1424,6 +1873,22 @@
                                         </g>
                                     </svg>
                                 </div>
+                                <div class="sex__type woman-nonactive none">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="34px" height="45px" viewBox="0 0 34 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+                                            <title>Group 12 Copy</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Artboard" transform="translate(-60.000000, -74.000000)">
+                                                    <g id="Group-12-Copy" transform="translate(60.000000, 74.000000)">
+                                                        <rect id="Rectangle-Copy-13" fill="#00AAFE" x="0" y="0" width="34" height="45" rx="2"></rect>
+                                                        <path d="M17.3417331,7.00000092 C15.4780557,6.99866304 13.9660167,8.52138037 13.9641379,10.4014493 C13.9634984,11.3053208 14.3191452,12.1723578 14.9527055,12.8114925 C15.5862659,13.4506272 16.4457423,13.8094045 17.3417331,13.808762 C18.2377322,13.8094174 19.0972209,13.4506458 19.7307917,12.8115097 C20.3643625,12.1723736 20.7200158,11.3053292 20.7193763,10.4014493 C20.7174975,8.52136143 19.2054292,6.99863627 17.3417331,7.00000092 L17.3417331,7.00000092 Z M17.3417331,14.9895834 C16.9552776,14.9895834 16.5693986,15.2112684 16.415806,15.6534122 L11,31.2800928 L14.7095694,31.2800928 L14.7095694,36.9433222 L19.9739929,36.9433222 L19.9739929,31.2800928 L23.6835142,31.2800928 L18.2677082,15.6534122 C18.1126263,15.2112684 17.7282847,14.9895834 17.3417331,14.9895834 L17.3417331,14.9895834 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="periods__date">
@@ -1432,11 +1897,11 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата заезда</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата выезда</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Отряд</div>
@@ -1461,11 +1926,11 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Телефон основной</div>
-                            <input type="text" class="periods__input periods__input_big">
+                            <input type="text" class="periods__input periods__input_big tel-mask">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Телефон дополнительный</div>
-                            <input type="text" class="periods__input periods__input_big">
+                            <input type="text" class="periods__input periods__input_big tel-mask">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Email</div>
@@ -1487,7 +1952,7 @@
                             <input type="text" class="periods__input periods__input_big" placeholder="Организатор">
                         </div>
                     </div>
-                    <input type="text" class="comment-input periods__input periods__input_large" placeholder="Коментарии">
+                    <textarea class="comment-input periods__input periods__input_large textarea" placeholder="Коментарии"></textarea>
                     <div class="collective__btn btn active-btn">Сохранить</div>
                 </div>
                 <div class="individual section collective" id="individual-transfer-page">
@@ -1519,7 +1984,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Город выезда">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1546,7 +2011,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Город выезда">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1580,7 +2045,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Город выезда">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1617,7 +2082,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Город выезда">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1667,7 +2132,7 @@
                             <input type="text" class="periods__input periods__input_transport" placeholder="Город выезда">
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="collective__btn btn active-btn">Сохранить</div>
@@ -1698,7 +2163,7 @@
                             </div>
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1746,7 +2211,7 @@
                             </div>
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1774,7 +2239,7 @@
                             </div>
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1827,7 +2292,7 @@
                             </div>
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                     <div class="periods">
@@ -1867,7 +2332,7 @@
                             </div>
                         </div>
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                         </div>
                     </div>
                         <div class="periods">
@@ -1879,7 +2344,7 @@
                                     </div>
                                 </div>
                                 <div class="periods__date">
-                                    <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                        <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                                 </div>
                             </div>
                             <div class="periods">
@@ -1891,7 +2356,7 @@
                                         </div>
                                     </div>
                                     <div class="periods__date">
-                                        <input type="text" class="periods__input periods__input_transport-large" placeholder="Коментарии">
+                                            <textarea class="periods__input periods__input_transport-large textarea" placeholder="Коментарии"></textarea>
                                     </div>
                                 </div>
                     
@@ -1912,7 +2377,7 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Дата Рождения</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Серия/номер</div>
@@ -1920,12 +2385,12 @@
                         </div>
                         <div class="periods__date">
                             <div class="forms__title">Действителен</div>
-                            <input type="text" class="periods__input periods__input_medium" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                     </div>
                     <div class="collective__btn btn active-btn">Сохранить</div>
                 </div>
-                <div class="individual section collective" id="individual-services-page">
+                <div class="individual section collective services" id="individual-services-page">
                     <h1 class="section__title">Дополнительные услуги</h1>
                     <div class="periods">
                         <div class="periods__date">
@@ -1956,36 +2421,84 @@
                     </div>
                     <div class="periods">
                         <div class="periods__date">
-                            <input type="text" class="periods__input periods__input_medium periods__input_tab" placeholder="ДД.ММ.ГГ">
+                            <input type="text" class="periods__input periods__input_medium periods__input_tab date-mask" placeholder="ДД.ММ.ГГ">
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-60">$</div>
+                            <div class="dollar-select dollar-select-60 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-61">$</div>
+                            <div class="dollar-select dollar-select-61 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar before">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-62">$</div>
+                            <div class="dollar-select dollar-select-62 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar after">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-63">$</div>
+                            <div class="dollar-select dollar-select-63 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
                         <div class="periods__date">
-                            <div class="add-btn btn">Добавить строку</div>
+                            <div class="add-btn btn">Добавить строку<span>+</span></div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-64">$</div>
+                            <div class="dollar-select dollar-select-64 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-65">$</div>
+                            <div class="dollar-select dollar-select-65 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-66">$</div>
+                            <div class="dollar-select dollar-select-66 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-67">$</div>
+                            <div class="dollar-select dollar-select-67 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
                     <div class="periods">
@@ -1994,18 +2507,42 @@
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-68">$</div>
+                            <div class="dollar-select dollar-select-68 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-69">$</div>
+                            <div class="dollar-select dollar-select-69 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar d-none">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-70">$</div>
+                            <div class="dollar-select dollar-select-70 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                         <div class="periods__date periods__date_dollar">
                             <input type="text" class="periods__input periods__input_small periods__input_tab">
+                            <div class="dollar-btn dollar-btn-71">$</div>
+                            <div class="dollar-select dollar-select-71 d-none">
+                                <div class="val grn"><span>Гривна</span>₴</div>
+                                <div class="val dol"><span>Доллар</span>$</div>
+                                <div class="val eu"><span>Евро</span>€</div>
+                            </div>
                         </div>
                     </div>
-                    <input type="text" class="comment-input periods__input periods__input_large" placeholder="Коментарии">
+                    <textarea class="comment-input periods__input periods__input_large textarea" placeholder="Коментарии"></textarea>
                     <div class="row__check">
                         <div class="check">
                             <input type="checkbox" class="checkbox" id="checkbox-4">
@@ -2037,8 +2574,8 @@
                 <div class="client-statistic section">
                     <h1 class="section__title">Статистика по клиентам</h1>
                     <div class="d-flex m-top">
-                        <div class="client-statistic__active btn">Коллективы</div>
-                        <div class="client-statistic__unactive btn">Индивидуалы</div>
+                        <div class=" btn age-btn age-btn_active" id="collective-btn">Коллективы</div>
+                        <div class=" btn age-btn" id="individual-btn">Индивидуалы</div>
                     </div>
                     <div class="d-flex">
                         <div class="radio">
@@ -2057,53 +2594,52 @@
                     <div class="forms">
                         <div class="periods">
                             <div class="radio">
-                                <input type="radio" class="forms-radio" id="periods__radio-7">
+                                <input type="radio" name="stat" class="forms-radio" id="periods__radio-7">
                                 <label for="periods__radio-7"></label>
                             </div>
                             <div class="periods__date">
                                 <div class="forms__title">Период от</div>
-                                <input type="text" class="periods__input" placeholder="ДД.ММ.ГГ">
+                                <input type="text" class="periods__input date-mask" placeholder="ДД.ММ.ГГ">
                                 <a href="#" class="periods__btn btn active-btn">Выбрать</a>
                             </div>
                             <div class="periods__date">
                                 <div class="forms__title">Период до</div>
-                                <input type="text" class="periods__input" placeholder="ДД.ММ.ГГ">
+                                <input type="text" class="periods__input date-mask" placeholder="ДД.ММ.ГГ">
                             </div>
                         </div>
                         <div class="festivals festivals_padding">
                             <div class="radio">
-                                <input type="radio" class="forms-radio" id="festivals__radio-8">
+                                <input type="radio" name="stat1" class="forms-radio" id="festivals__radio-8">
                                 <label for="festivals__radio-8"></label>
                             </div>
                             <div class="festivals__inner">
                                 <div class="forms__title">Фестивали</div>
-                                <select name="select-box" id="selectId-5" class="select">
-                                    <option value="item-1" name="value">Звездный Бриз</option>
-                                    <option value="item-2" name="value">Арт Волна</option>
-                                    <option value="item-1" name="value">Китен Арт Тайм</option>
-                                    <option value="item-2" name="value">Арт Волна</option>
-                                </select>
-                                <div class="festivals__btns">
-                                    <a href="#" class="periods__btn btn active-btn">Выбрать</a>
+                                <div class="select-absolute">
+                                        <select name="select-box" id="selectId-5" class="select">
+                                                <option value="item-1" name="value">Звездный Бриз</option>
+                                                <option value="item-2" name="value">Арт Волна</option>
+                                                <option value="item-1" name="value">Китен Арт Тайм</option>
+                                                <option value="item-2" name="value">Арт Волна</option>
+                                            </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="festivals">
+                        <div class="festivals none add-left" id="stat-individual">
                             <div class="radio">
-                                <input type="radio" class="forms-radio" id="festivals__radio-10">
+                                <input type="radio" name="stat2" class="forms-radio" id="festivals__radio-10">
                                 <label for="festivals__radio-10"></label>
                             </div>
                             <div class="festivals__inner festivals__inner_small">
                                 <div class="forms__title">Отряд</div>
-                                <select name="select-box" id="selectId-6" class="select">
-                                    <option value="item-1" name="value">23</option>
-                                    <option value="item-2" name="value">23</option>
-                                    <option value="item-1" name="value">23</option>
-                                    <option value="item-2" name="value">23</option>
-                                </select>
-                                <div class="festivals__btns">
-                                    <a href="#" class="periods__btn btn active-btn">Выбрать</a>
+                                <div class="select-absolute ">
+                                        <select name="select-box" id="selectId-6" class="select">
+                                                <option value="item-1" name="value">23</option>
+                                                <option value="item-2" name="value">23</option>
+                                                <option value="item-1" name="value">23</option>
+                                                <option value="item-2" name="value">23</option>
+                                            </select>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -2293,6 +2829,15 @@
                             </td>
                         </tr>
                     </table>
+                    <div class="concat">
+                        <a href="#" class="concat__item concat__item-active">1</a>
+                        <a href="#" class="concat__item">2</a>
+                        <a href="#" class="concat__item">3</a>
+                        <a href="#" class="concat__item">4</a>
+                        <a href="#" class="concat__item">5</a>
+                        <a href="#" class="concat__item">...</a>
+                        <a href="#" class="concat__item">12</a>
+                    </div>
                     <div class="d-flex m-bottom">
                         <div class="client-statistic__unactive btn">Распечатать </div>
                         <div class="client-statistic__nonactive btn">Экспорт</div>
@@ -2331,7 +2876,7 @@
                             <div class="diagramma__desc diagramma__desc_6">Кипарисный</div>
                         </div>
                         <div class="d-flex d-flex-column">
-                            <div class="diagramma__desc diagramma__desc_7">Кипарисный</div>
+                            <div class="diagramma__desc diagramma__desc_7">Лазурный</div>
                         </div>
                     </div>
                     <div class="diagramma__inner">
@@ -2631,7 +3176,7 @@
                             <td class="bold">980</td>
                             <td class="bold">401</td>
                             <td class="bold">38349</td>
-                            <td class="bold text-left">35</td>
+                            <td class="bold text-left"></td>
                         </tr>
                     </table>
                     <div class="d-flex m-bottom client-statistic">
@@ -2703,7 +3248,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -2756,7 +3301,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -2809,7 +3354,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -2862,7 +3407,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -2915,7 +3460,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -2968,7 +3513,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-festival" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3030,7 +3575,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-corpus" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3066,7 +3611,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-corpus" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3102,7 +3647,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-corpus" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3138,7 +3683,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-corpus" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3174,7 +3719,7 @@
                             </td>
                             <td class="text-center">
                                 <?xml version="1.0" encoding="UTF-8"?>
-                                <svg id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
+                                <svg class="trash-corpus" id="SVGDoc" width="16" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 16 18">
                                     <defs></defs>
                                     <desc>Generated with Avocode.</desc>
                                     <g>
@@ -3195,7 +3740,7 @@
         </div>
         <!-- /.container -->
         <!-- Modals -->
-        <div class="corpus-modals modals">
+        <div class="corpus-modals modals" id="corpus-modals">
             <div class="corpus-modals__inner">
                 <div class="corpus-modals__title">Добавить корпус</div>
                 <div class="d-flex justify-between">
@@ -3222,8 +3767,8 @@
                 <div class="d-flex align-center">
                     <div class="corpus-modals__text m-right">Даты</div>
                     <div class="d-flex justify-center m-left">
-                        <input type="text" class="corpus-modals__input date-input" placeholder="ДД.ММ.ГГ">
-                        <input type="text" class="corpus-modals__input date-input" placeholder="ДД.ММ.ГГ">
+                        <input type="text" class="corpus-modals__input date-input date-mask" placeholder="ДД.ММ.ГГ">
+                        <input type="text" class="corpus-modals__input date-input date-mask" placeholder="ДД.ММ.ГГ">
                     </div>
                 </div>
                 <div class="d-flex justify-between">
@@ -3232,11 +3777,11 @@
                 </div>
                 <div class="d-flex justify-between">
                     <div class="corpus-modals__text">Телефон осн.</div>
-                    <input type="text" class="corpus-modals__input">
+                    <input type="text" class="corpus-modals__input tel-mask">
                 </div>
                 <div class="d-flex justify-between">
                     <div class="corpus-modals__text">Телефон доп.</div>
-                    <input type="text" class="corpus-modals__input">
+                    <input type="text" class="corpus-modals__input tel-mask">
                 </div>
                 <div class="d-flex justify-start align-center">
                     <div class="corpus-modals__text">On-line</div>
@@ -3296,7 +3841,7 @@
                     <div class="corpus-modals__text">On-line</div>
                     <div class="d-flex d-flex_m-bottom m-left-2 align-center">
                         <div class="check">
-                            <input type="checkbox" class="checkbox" id="checkbox-32" checked>
+                            <input type="checkbox" class="checkbox" id="checkbox-32">
                             <label for="checkbox-32">Viber</label>
                         </div>
                         <div class="check">
@@ -3304,7 +3849,7 @@
                             <label for="checkbox-33">WatsAp</label>
                         </div>
                         <div class="check">
-                            <input type="checkbox" class="checkbox" id="checkbox-34" checked>
+                            <input type="checkbox" class="checkbox" id="checkbox-34">
                             <label for="checkbox-34">Telegram</label>
                         </div>
                     </div>
@@ -3322,7 +3867,32 @@
                 </div>
             </div>
         </div>
+
+        <div class="corpus-modals modals remove-festivale">
+            <div class="corpus-modals__inner remove-mod">
+                <div class="corpus-modals__title">Удалить фестиваль?</div>
+                <div class="d-flex justify-center m-top">
+                    <div class="nonactive-btn btn cancel">Нет</div>
+                    <div class="active-btn btn cancel">Да</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="corpus-modals modals remove-corpus">
+                <div class="corpus-modals__inner remove-mod">
+                    <div class="corpus-modals__title">Удалить корпус?</div>
+                    <div class="d-flex justify-center m-top">
+                        <div class="nonactive-btn btn cancel">Нет</div>
+                        <div class="active-btn btn cancel">Да</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

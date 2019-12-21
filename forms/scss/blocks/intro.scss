@@ -8,7 +8,7 @@
 
 .intro__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 41px;
 
@@ -87,6 +87,7 @@
     margin-left: 65px;
 
     & .tab {
+        white-space: nowrap;
         margin-left: 0;
         border: none;
         color: #686868;
@@ -94,6 +95,12 @@
         &:not(:last-child) {
             margin-right: 31px;
         }
+    }
+
+    & img {
+        display: inline !important;
+        margin-left: 4px;
+        margin-bottom: -2px;
     }
 }
 
