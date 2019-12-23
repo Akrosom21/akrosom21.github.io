@@ -288,6 +288,14 @@ $('.age-btn').click(function(){
     $(this).addClass('age-btn_active');
 });
 
+$(document).mouseup(function (e){
+    var div = $(".dollar-select");
+    if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+            $(".dollar-select").addClass("d-none");
+    }
+});
+
 $('.dollar-btn-1').click(function(){
     $('.dollar-select-1').toggleClass('d-none');
     $('.dollar-select-1').toggleClass('z-index');
@@ -652,13 +660,7 @@ $('.dollar-btn-71').click(function(){
 });
 
 
-$(document).mouseup(function (e){
-    var div = $(".dollar-select");
-    if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-            $(".dollar-select").addClass("d-none");
-    }
-});
+
 
 
 $('.grn').click(function(){

@@ -39,6 +39,9 @@ img {
 .d-none {
   display: none !important; }
 
+.opacity {
+  opacity: 0; }
+
 .none {
   display: none !important; }
 
@@ -148,7 +151,8 @@ table svg {
 
 .container {
   width: 100%;
-  max-width: 1470px; }
+  max-width: 1470px;
+  margin: 0 auto; }
 
 .header {
   display: flex;
@@ -1012,6 +1016,9 @@ input[type=checkbox]:checked + label:before {
   position: absolute;
   bottom: -20px;
   z-index: 222; }
+
+.error-border {
+  border: 1px solid #f25580; }
 
 .individual .periods__input_small {
   margin-bottom: 30px; }
