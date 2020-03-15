@@ -1,0 +1,112 @@
+.payment__title {
+    padding-top: 46px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 55px;
+    font-family: 'omnes-cyrillic', sans-serif;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.payment__text {
+    font-size: 18px;
+    line-height: 32px;
+    color: #828282;
+    max-width: 836px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 27px;
+}
+
+.payment__items {
+    display: grid;
+    grid-template-columns: 288px 288px 288px 288px;
+    grid-template-rows: 160px 160px 160px;
+    row-gap: 40px;
+    column-gap: 37px;
+    padding-bottom: 96px;
+}
+
+.payment__item {
+    border: 1px solid #E0DED8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.payment__item-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment__item-text {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 17px;
+    padding-top: 26px;
+}
+
+.payment__item-img {
+    margin: 0 auto;
+}
+
+@media (max-width: 1230px) {
+    .payment__items {
+        grid-template-columns: 288px 288px;
+        grid-template-rows: 160px 160px 160px 160px 160px 160px;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 770px) {
+    .payment__items {
+        gap: 16px;
+        grid-template-columns: 156px 156px;
+        grid-template-rows: 160px 160px 160px 160px 160px 160px;
+    }
+
+    .payment__item-text {
+        font-size: 14px;
+        line-height: 18px;
+        max-width: 128px;
+        margin: 0 auto;
+    }
+
+    .payment__item-imgs {
+        flex-direction: column;
+        position: relative;
+        top: 20px;
+
+        .payment__item-img:first-child {
+            margin-bottom: 8px;
+        }
+    }
+
+    .payment__item-img {
+        transform: scale(0.74);
+    }
+}
+
+@media (max-width: 575px) {
+    .payment__title {
+        font-size: 28px;
+        line-height: 35px;
+        text-align: left;
+    }
+
+    .payment__text {
+        font-size: 14px;
+       line-height: 24px;
+       text-align: left;
+        max-width: 328px;
+    }
+
+    .payment__items {
+        padding-bottom: 48px;
+    }
+}

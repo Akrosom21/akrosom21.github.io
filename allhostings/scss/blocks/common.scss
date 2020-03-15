@@ -1,0 +1,59 @@
+*, 
+*:before, 
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	// font-family: 'omnes-cyrillic', sans-serif;
+	font-size: 15px;
+	color: #1A2036;
+}
+
+@media (max-width: 575px) {
+	body {
+		font-size: 17px;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.btn {
+	border: 0;
+	transition: all .2s linear;
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.dn {
+	display: none !important;
+}
+
+.df {
+	display: flex !important;
+}
+
+.db {
+	display: block !important;
+}
+
+.rotate {
+	transform: translateY(-50%) rotate(180deg) !important;
+}

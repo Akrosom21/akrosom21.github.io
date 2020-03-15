@@ -1,0 +1,130 @@
+.forall {
+    background: #FAF8F4;
+    border-top: 1px solid #E0DED8;
+    border-bottom: 1px solid #E0DED8;
+    padding-top: 70px;
+    padding-bottom: 96px;
+}
+
+.forall__title {
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 55px;
+    text-align: center;
+    padding-bottom: 19px;
+}
+
+.forall__text {
+    font-size: 18px;
+    line-height: 32px;
+    color: #828282;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.forall__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forall__item {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    width: 288px;
+    overflow: hidden;
+}
+
+.forall__item-img {
+    margin-bottom: 28px;
+}
+
+.forall__item-title {
+    padding-top: 17px;
+    border-top: 1px solid #E0DED8;
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 5px;
+}
+
+.forall__item-text {
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+
+.forall__item-link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: #558ABA;
+    padding-bottom: 22px;
+    display: block;
+}
+
+.forall__item-top {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forall__item-bottom {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.forall__item_active {
+    .forall__item-top {
+        background-color: #57BB95;
+    }
+
+    .forall__item-bottom {
+        background-color: #5ECCA0;
+    }
+
+    .forall__item-title {
+        border-top: none;
+        color: #fff;
+    }
+
+    .forall__item-text, .forall__item-link {
+        color: #fff;
+    }
+}
+
+@media (max-width: 990px) {
+    .forall__intro {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .forall__item {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .forall {
+        padding-top: 41px;
+        padding-bottom: 48px;
+    }
+
+    .forall__title {
+        font-size: 28px;
+        line-height: 28px;
+        padding-bottom: 10px;
+        max-width: 308px;
+    }
+
+    .forall__text {
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 21px;
+    }
+}

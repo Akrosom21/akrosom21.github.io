@@ -1,0 +1,149 @@
+.why {
+    background: url('../img-min/why-bg.png') no-repeat center;
+    background-size: cover;
+    height: 1024px;
+    margin-top: -40px;
+}
+
+.why__title {
+    padding-top: 78px;
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 55px;
+    text-align: center;
+    padding-bottom: 19px;
+}
+
+.why__text {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 36px;
+    color: #828282;
+}
+
+.why__row {
+    display: flex;
+    align-items: center;
+    padding-bottom: 57px;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &_pt {
+        padding-top: 42px;
+    }
+
+    &_border {
+        border-top: 1px solid #E0DED8;
+        border-bottom: 1px solid #E0DED8;
+    }
+}
+
+.why__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.why__item-img {
+    margin-right: 17px;
+}
+
+.why__item-title {
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #7A7A7A;
+    padding-bottom: 9px;
+}
+
+.why__item-text {
+    line-height: 28px;
+    max-width: 448px;
+}
+
+.why__item-link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: #558ABA;
+    margin-top: 10px;
+    display: block;
+}
+
+@media (max-width: 1230px) {
+    .why {
+        height: auto;
+        padding-bottom: 89px;
+    }
+}
+
+@media (max-width: 990px) {
+    .why__row {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .why__row_border {
+        border-bottom: none;
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .why__row_pt {
+        padding-top: 0;
+    }
+
+    .why__item {
+        margin-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .why__item-img {
+        width: 25%;
+        margin-right: 0;
+    }
+
+    .why__item-title {
+        text-align: center;
+        font-size: 22px;
+        line-height: 24px;
+        padding-top: 12px;
+        padding-bottom: 11px;
+    }
+
+    .why__item-text {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 329px;
+    }
+
+    .why__item-link {
+        text-align: center;
+    }
+
+    .why__title {
+        padding-top: 54px;
+        padding-bottom: 14px;
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .why__text {
+        max-width: 328px;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 auto;
+        padding-bottom: 18px;
+    }
+}

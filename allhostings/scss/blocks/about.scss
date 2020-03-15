@@ -1,0 +1,45 @@
+.about {
+    background: url('../img-min/info-intro-bg.png') no-repeat center;
+    background-size: cover;
+    padding-top: 106px;
+    padding-bottom: 86px;
+}
+
+.about__title {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 70px;
+    text-align: center;
+    font-family: 'omnes-cyrillic', sans-serif;
+    padding-bottom: 10px;
+}
+
+.about__text {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 781px;
+}
+
+@media (max-width: 575px) {
+    .about {
+        background: url(../img-min/info-intro-bg-min.png) no-repeat center;
+        background-size: cover;
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+
+    .about__title {
+        font-size: 36px;
+        line-height: 36px;
+        max-width: 308px;
+        margin: 0 auto;
+    }
+
+    .about__text {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 328px;
+    }
+}

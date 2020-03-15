@@ -1,0 +1,28 @@
+.government-intro {
+    .services-intro__top {
+        background: url(../img-min/government-intro-bg.png) no-repeat center;
+    }
+
+    .services-intro__btn-text_active {
+        background: #8C6FCB;
+    }
+
+    .services-intro__items {
+        justify-content: center;
+        margin-top: -260px;
+        margin-bottom: 0;
+        padding-bottom: 58px;
+    }
+
+    .services-intro__price {
+        color: #8C6FCB;
+    }
+
+    .services-intro__order {
+        background: #8C6FCB;;
+    }
+
+    .services-intro__item-header {
+        background: url(../img-min/government-top-bg.png) no-repeat center;
+    }
+}

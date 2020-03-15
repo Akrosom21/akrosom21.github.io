@@ -1,0 +1,44 @@
+.wp-intro {
+
+    .services-intro__top {
+        background: url('../img-min/wp-intro-bg.png') no-repeat center;
+        height: 680px;
+    }
+
+    .services-intro__btn {
+        border: 2px solid #5ECCA0;
+    }
+
+    .services-intro__btn-text_active {
+        background: #5ECCA0;
+    }
+
+    .services-intro__item-header {
+        background: url('../img-min/wp-top-bg.png') no-repeat center;
+    }
+
+    .services-intro__price {
+        color: #5ECCA0;
+
+        & span {
+            color: #5ECCA0;
+        }
+    }
+
+    .services-intro__order {
+        background: #5ECCA0;
+    }
+}
+
+@media (max-width: 575px) {
+    .wp-intro {
+        .tariffs {
+            padding-bottom: 43px;
+            padding-top: 23px;
+        }
+    }
+    .about-wp .why-services__text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

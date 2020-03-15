@@ -1,0 +1,84 @@
+.technical {
+    background-color: #F3EEE3;
+    padding-top: 54px;
+    padding-bottom: 64px;
+}
+
+.technical__title {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 55px;
+    font-family: 'omnes-cyrillic', sans-serif;
+    text-align: center;
+    padding-bottom: 37px;
+}
+
+.technical__items {
+    display: flex;
+    align-items: center;
+}
+
+.technical__item-title {
+    padding-top: 24px;
+    color: #9E8D6D;
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.technical__item-text {
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 22px;
+    max-width: 592px;
+    color: #828282;
+}
+
+.technical__item-btn {
+    background: #FFAE34;
+    border-radius: 8px;
+    width: 216px;
+    height: 56px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+@media (max-width: 990px) {
+    .technical__items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .technical__item {
+        margin-bottom: 33px;
+    }
+}
+
+@media (max-width: 575px) {
+    .technical {
+        padding-top: 40px;
+        padding-bottom: 14px;
+    }
+
+    .technical__title {
+        font-size: 27px;
+        line-height: 28px;
+        padding-bottom: 27px;
+    }
+
+    .technical__item-title {
+        padding-top: 16px;
+        font-size: 18px;
+    }
+
+    .technical__item-text {
+        font-size: 15px;
+        padding-bottom: 9px;
+        color: #1A2036;
+    }
+}

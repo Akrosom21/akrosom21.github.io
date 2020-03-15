@@ -1,0 +1,168 @@
+.why-services {
+    background: url('../img-min/why-services-bg.png') no-repeat center;
+    background-size: cover;
+    padding-bottom: 38px;
+    margin-top: -70px;
+ //   min-height: 1840px;
+}
+
+.why-services__title {
+    padding-top: 78px;
+    padding-bottom: 19px;
+    text-align: center;
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 55px;
+    color: #1A2036;
+}
+
+.why-services__text {
+    font-size: 18px;
+    line-height: 32px;
+    color: #828282;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.why-services__row {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #E0DED8;
+    }
+    
+}
+
+.why-services__left {
+    display: flex;
+    align-items: center;
+}
+
+.why-services__left-img {
+    margin-right: 65px;
+    width: 176px;
+}
+
+.why-services__desc {
+    padding-right: 48px;
+    border-right: 1px dashed #E0DED8;
+}
+
+.why-services__desc-title {
+    font-family: 'omnes-cyrillic', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #7A7A7A;
+    padding-bottom: 15px;
+}
+
+.why-services__desc-text {
+    line-height: 28px;
+    max-width: 543px;
+    padding-bottom: 7px;
+    margin-top: 20px;
+}
+
+.why-services__desc-link {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: #558ABA;
+}
+
+.why-services__right-imgs {
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    margin-left: 39px;
+}
+
+.why-services__right-text {
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 47px;
+
+    & p {
+        margin: 0;
+    }
+
+    & span {
+        color: #5ECCA0;
+    }
+}
+
+@media (max-width: 990px) {
+    .why-services__right {
+        display: none;
+    }
+
+    .why-services__desc {
+        border-right: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .why-services__title {
+        font-size: 28px;
+        line-height: 35px;
+        padding-top: 54px;
+        padding-bottom: 14px;
+    }
+
+    .why-services__text {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 328px;
+        margin: 0 auto; 
+    }
+
+    .why-services__left-img {
+        margin-right: 13px;
+        width: 72px;
+    }
+
+    .why-services__left {
+        align-items: flex-start;
+    }
+
+    .why-services__desc-title {
+        font-size: 22px;
+        line-height: 24px;
+        max-width: 242px;
+    }
+
+    .why-services__desc-text {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 329px;
+    }
+
+    .why-services__row {
+        justify-content: center;
+        padding-top: 37px;
+        padding-bottom: 33px;
+    }
+
+    .why-services__desc {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .why-services__desc-text, .why-services__desc-link {
+        margin-left: -80px;
+    }
+
+    .why-services {
+        padding-bottom: 8px;
+    }
+}
+
+.about-wp .no-min {
+    min-height: auto;
+}
